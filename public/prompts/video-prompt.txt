@@ -1,0 +1,53 @@
+Create a cinematic, ultra-smooth 16:9 portfolio introduction video using the two provided reference images. Preserve the exact visual identity, character appearance, outfit, colors, objects, and overall composition of both reference images.
+
+SCENE 1 — DEVELOPER INTRO (0–4 seconds)
+
+Start with the first reference image exactly as the opening frame.
+
+- The girl on the right gently and naturally moves her fingers while typing on her MacBook keyboard.
+- Her head and eyes make very subtle natural movements as she looks at the laptop screen.
+- The Developer ID Card hanging on the left gently swings from side to side, as if affected by a light breeze.
+- The ID card and its strap have realistic, subtle physics.
+- The floating pink and blue folders move very slightly, creating a sophisticated 3D depth effect.
+- Keep the large background typography and all text unchanged and readable.
+- The camera remains mostly stable, with a very subtle cinematic push-in.
+
+SCENE 2 — GSAP TRANSITION (4–6 seconds)
+
+Create a seamless, premium transition inspired by GSAP animation techniques.
+
+- The camera smoothly accelerates toward the MacBook.
+- Use a cinematic dolly-in combined with a smooth scale animation.
+- As the camera approaches the laptop, the laptop becomes the main focus.
+- Use a sophisticated seamless zoom transition with subtle motion blur.
+- The first scene smoothly transforms into the second reference image.
+- No sudden cuts, no glitches, no distorted objects.
+
+SCENE 3 — PORTFOLIO REVEAL (6–10 seconds)
+
+Match the second reference image's composition.
+
+- The MacBook screen starts completely black.
+- The screen gradually powers on with a subtle, elegant light effect.
+- A beautiful, modern Front-End Developer portfolio website appears on the screen.
+- Show a sophisticated portfolio interface with multiple website project previews arranged in a clean grid.
+- Display different modern website designs: a professional corporate website, an e-commerce website, a dashboard/CRM interface, and a reservation management website.
+- Website previews should have realistic layouts, navigation bars, typography, images, and colorful UI elements.
+- Animate the portfolio projects smoothly appearing on the screen, one after another.
+- Add subtle scrolling or UI movement inside the portfolio website to make it feel like a real working website.
+- The final frame should clearly showcase the portfolio websites on the MacBook display.
+
+VISUAL STYLE
+
+Premium creative developer portfolio aesthetic, realistic 3D depth, professional cinematic lighting, smooth motion, realistic human movement, high-quality MacBook details, clean blue gradient background, elegant motion design.
+
+IMPORTANT
+
+- Preserve the girl's original face and appearance.
+- Do not change the Developer Card design or text.
+- Do not introduce additional people.
+- Do not deform the MacBook or its screen.
+- Keep the laptop screen facing the camera and make the portfolio clearly visible.
+- No random text, no visual glitches, no flickering.
+- Smooth, polished animation with professional GSAP-style easing.
+- 16:9, 4K quality, 60 FPS.
