@@ -329,25 +329,25 @@
     "eyebrow": "07 / Haqqımda",
     "title": "Salam, mən Arzuyam.",
     "intro": "React və Next.js ilə işləyən front-end developerəm. Dizaynı diqqətlə, kodu səliqəli yazmağı sevirəm.",
-    "portraitAlt": "Front-end developer Arzu Mammadova",
     "bioEyebrow": "Qısaca",
     "bioTitle": "Front-end inkişafı, dizayna diqqət və öyrənmə həvəsi.",
     "bio1": "React, Redux, Tailwind CSS və Material UI ilə front-end inkişafı üzrə ixtisaslaşıram. Next.js ilə real platformalarda — INGRI və VRIBBE kimi layihələrdə — interfeyslər qurmuşam.",
     "bio2": "Node.js, Express.js və MongoDB ilə backend təcrübəm də var. Bu, frontend-i API və məlumat strukturu ilə daha yaxşı əlaqələndirməyə kömək edir.",
     "bio3": "Məqsədim full-stack developer olmaq və təsirli rəqəmsal məhsullar qurmaqdır. Hazırda TypeScript, qabaqcıl Next.js və React Native biliklərimi dərinləşdirirəm.",
-    "factLocation": "Məkan",
     "factEmail": "E-poçt",
-    "statsLabel": "Qısa rəqəmlər",
-    "statProjects": "layihə",
-    "statExperience": "iş təcrübəsi",
-    "statCertificates": "sertifikat",
-    "statLanguages": "dil",
     "stackEyebrow": "Texnologiyalar",
     "stackTitle": "İş alətlərim",
     "journeyEyebrow": "Yolum",
     "journeyTitle": "Təcrübə və təhsil",
     "ctaTitle": "Birlikdə işləyək?",
     "ctaText": "Yeni layihə, komanda və ya əməkdaşlıq təklifi üçün yazın.",
-    "cta": "Əlaqə saxlayın"
+    "cta": "Əlaqə saxlayın",
+    "factRole": "Rol",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "design": "Dizayn və alətlər",
+      "ai": "Süni intellekt alətləri"
+    }
   }
 }

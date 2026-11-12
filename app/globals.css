@@ -2783,3 +2783,99 @@ body:has(.content-page) {
   }
 }
 /* ===== END mascot-subpages ===== */
+
+/* ===== BEGIN about-v2 ===== */
+.about-page .about-intro {
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+  align-items: stretch;
+}
+.about-page .about-bio h2 {
+  margin-top: 12px;
+}
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+  border-radius: 20px;
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(132, 181, 214, 0.35), transparent 60%),
+    linear-gradient(160deg, #f3f8fd, #e4f0fa);
+  border: 1px solid #d6e7f5;
+}
+.about-card .about-facts {
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  gap: 18px;
+}
+.about-card .about-facts dd {
+  font-size: 15px;
+}
+.about-card-cta {
+  align-self: flex-start;
+}
+.stack-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.stack-group {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px;
+  background: linear-gradient(180deg, #fff, #f8fbfe);
+}
+.stack-group-frontend {
+  grid-column: 1 / -1;
+}
+.stack-group-ai {
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(238, 125, 187, 0.12), transparent 55%),
+    linear-gradient(180deg, #fff, #f7f9ff);
+}
+.stack-group h3 {
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2868a9;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.stack-group h3::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: linear-gradient(140deg, #083b71, #4f9ad6);
+}
+.stack-group-ai h3::before {
+  background: linear-gradient(140deg, #ee7dbb, #4f9ad6);
+}
+.stack-group .stack-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.stack-icon img {
+  border-radius: 6px;
+}
+@media (max-width: 860px) {
+  .about-page .about-intro,
+  .stack-groups {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .stack-group {
+    padding: 18px 14px;
+  }
+  .stack-group .stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* ===== END about-v2 ===== */

@@ -114,30 +114,59 @@ export const portfolioProjects: {
   },
 ];
 
-// Tech stack: icons are the ones used on the old portfolio site.
-export const techStack: { name: string; icon?: string }[] = [
-  { name: "HTML", icon: "hmtlpng.png" },
-  { name: "CSS", icon: "css.png" },
-  { name: "JavaScript", icon: "js.png" },
-  { name: "TypeScript" },
-  { name: "React", icon: "react.svg.png" },
-  { name: "Next.js", icon: "next.png" },
-  { name: "Redux", icon: "redux.png" },
-  { name: "Zustand" },
-  { name: "Tailwind CSS", icon: "tailwind.png" },
-  { name: "SASS / SCSS", icon: "sass.png" },
-  { name: "Bootstrap", icon: "bootstrap.png" },
-  { name: "Material UI", icon: "material.png" },
-  { name: "GSAP" },
-  { name: "next-intl" },
-  { name: "Formik & Yup", icon: "formikyup.png" },
-  { name: "Figma", icon: "figma.png" },
-  { name: "Git", icon: "git.webp" },
-  { name: "Node.js", icon: "nodejs.png" },
-  { name: "Express.js", icon: "express.png" },
-  { name: "MongoDB", icon: "mongo.png" },
-  { name: "JWT", icon: "jwt.png" },
-  { name: "Postman", icon: "postman.webp" },
-  { name: "Vercel", icon: "vercel.png" },
-  { name: "Render", icon: "render.jpg" },
+// Tech stack, grouped. Most icons come from the old portfolio site; the AI
+// tool, TypeScript, GSAP and Zustand icons are the services' official favicons.
+export type TechItem = { name: string; icon?: string };
+export const techGroups: { id: "frontend" | "backend" | "design" | "ai"; items: TechItem[] }[] = [
+  {
+    id: "frontend",
+    items: [
+      { name: "HTML", icon: "hmtlpng.png" },
+      { name: "CSS", icon: "css.png" },
+      { name: "JavaScript", icon: "js.png" },
+      { name: "TypeScript", icon: "typescript.png" },
+      { name: "React", icon: "react.svg.png" },
+      { name: "Next.js", icon: "next.png" },
+      { name: "Redux", icon: "redux.png" },
+      { name: "Zustand", icon: "zustand.png" },
+      { name: "Tailwind CSS", icon: "tailwind.png" },
+      { name: "SASS / SCSS", icon: "sass.png" },
+      { name: "Bootstrap", icon: "bootstrap.png" },
+      { name: "Material UI", icon: "material.png" },
+      { name: "GSAP", icon: "gsap.png" },
+      { name: "next-intl" },
+      { name: "Formik & Yup", icon: "formikyup.png" },
+    ],
+  },
+  {
+    id: "backend",
+    items: [
+      { name: "Node.js", icon: "nodejs.png" },
+      { name: "Express.js", icon: "express.png" },
+      { name: "MongoDB", icon: "mongo.png" },
+      { name: "JWT", icon: "jwt.png" },
+      { name: "Postman", icon: "postman.webp" },
+    ],
+  },
+  {
+    id: "design",
+    items: [
+      { name: "Figma", icon: "figma.png" },
+      { name: "Git", icon: "git.webp" },
+      { name: "Vercel", icon: "vercel.png" },
+      { name: "Render", icon: "render.jpg" },
+    ],
+  },
+  {
+    id: "ai",
+    items: [
+      { name: "Cursor", icon: "cursor.png" },
+      { name: "Codex", icon: "codex.png" },
+      { name: "ChatGPT", icon: "chatgpt.png" },
+      { name: "Claude", icon: "claude.png" },
+      { name: "Grok", icon: "grok.png" },
+      { name: "ElevenLabs", icon: "elevenlabs.png" },
+      { name: "Higgsfield", icon: "higgsfield.png" },
+    ],
+  },
 ];

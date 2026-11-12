@@ -329,25 +329,25 @@
     "eyebrow": "07 / Обо мне",
     "title": "Привет, я Арзу.",
     "intro": "Front-end разработчик, работаю с React и Next.js. Люблю внимательный дизайн и чистый код.",
-    "portraitAlt": "Front-end разработчик Арзу Мамедова",
     "bioEyebrow": "Коротко",
     "bioTitle": "Front-end разработка, внимание к дизайну и желание учиться.",
     "bio1": "Специализируюсь на front-end разработке с React, Redux, Tailwind CSS и Material UI. На Next.js создавала интерфейсы для реальных платформ — INGRI и VRIBBE.",
     "bio2": "Есть опыт бэкенда с Node.js, Express.js и MongoDB — это помогает лучше связывать фронтенд с API и структурой данных.",
     "bio3": "Моя цель — стать full-stack разработчиком и создавать полезные цифровые продукты. Сейчас углубляю знания TypeScript, продвинутого Next.js и React Native.",
-    "factLocation": "Город",
     "factEmail": "E-mail",
-    "statsLabel": "В цифрах",
-    "statProjects": "проектов",
-    "statExperience": "места работы",
-    "statCertificates": "сертификатов",
-    "statLanguages": "языка",
     "stackEyebrow": "Технологии",
     "stackTitle": "Мои инструменты",
     "journeyEyebrow": "Путь",
     "journeyTitle": "Опыт и образование",
     "ctaTitle": "Поработаем вместе?",
     "ctaText": "Напишите мне о новом проекте, работе в команде или сотрудничестве.",
-    "cta": "Связаться"
+    "cta": "Связаться",
+    "factRole": "Роль",
+    "groups": {
+      "frontend": "Фронтенд",
+      "backend": "Бэкенд",
+      "design": "Дизайн и инструменты",
+      "ai": "ИИ-инструменты"
+    }
   }
 }

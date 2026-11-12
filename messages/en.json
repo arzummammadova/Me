@@ -329,25 +329,25 @@
     "eyebrow": "07 / About",
     "title": "Hi, I'm Arzu.",
     "intro": "A front-end developer working with React and Next.js. I care about careful design and clean code.",
-    "portraitAlt": "Front-end developer Arzu Mammadova",
     "bioEyebrow": "In short",
     "bioTitle": "Front-end development, an eye for design and a drive to learn.",
     "bio1": "I specialize in front-end development with React, Redux, Tailwind CSS and Material UI. With Next.js I have built interfaces for real platforms such as INGRI and VRIBBE.",
     "bio2": "I also have backend experience with Node.js, Express.js and MongoDB, which helps me connect the frontend with APIs and data structures.",
     "bio3": "My goal is to become a full-stack developer and build impactful digital products. I'm currently deepening my knowledge of TypeScript, advanced Next.js and React Native.",
-    "factLocation": "Location",
     "factEmail": "Email",
-    "statsLabel": "Quick numbers",
-    "statProjects": "projects",
-    "statExperience": "work experiences",
-    "statCertificates": "certificates",
-    "statLanguages": "languages",
     "stackEyebrow": "Technologies",
     "stackTitle": "My toolbox",
     "journeyEyebrow": "Journey",
     "journeyTitle": "Experience & education",
     "ctaTitle": "Shall we work together?",
     "ctaText": "Write to me about a new project, a team role or a collaboration.",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "factRole": "Role",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "design": "Design & tools",
+      "ai": "AI tools"
+    }
   }
 }
