@@ -56,7 +56,6 @@
     "visit": "Layihəni aç"
   },
   "why": {
-    "eyebrow": "01 / Haqqımda",
     "title": "Detalları düşünürəm. Məhsulu qururam.",
     "intro": "Təmiz kod, diqqətlə hazırlanmış interfeys və birlikdə işləmək mədəniyyəti. İnkişaf etdirdiyim hər layihəyə bu yanaşmanı gətirirəm.",
     "portraitAlt": "Front-end developer Arzu Mammadova",
@@ -73,7 +72,6 @@
     "contact": "Əlaqə saxlayaq"
   },
   "contact": {
-    "eyebrow": "04 / Əlaqə",
     "title": "Gəlin danışaq.",
     "intro": "Bir ideyanız, layihəniz və ya əməkdaşlıq təklifiniz var? Sizi dinləməyə hazıram.",
     "aside": "Layihənin məqsədi, mövcud dizaynı və gözləntiləriniz haqqında qısa məlumat göndərə bilərsiniz.",
@@ -90,10 +88,10 @@
     "formNote": "Bu forma hazır məktubu e-poçt proqramınızda açır. Göndərişi orada təsdiqləyirsiniz. E-poçt proqramı qurulmayıbsa, yuxarıdakı ünvana birbaşa yazın.",
     "send": "E-poçtda aç",
     "subject": "Portfolio vasitəsilə əlaqə — {name}",
-    "ready": "Məktub hazırlandı və e-poçt proqramınıza ötürüldü. Göndərmək üçün həmin proqramda təsdiqləyin. Açılmadısa, mesajı birbaşa e-poçt ünvanıma göndərə bilərsiniz."
+    "ready": "Məktub hazırlandı və e-poçt proqramınıza ötürüldü. Göndərmək üçün həmin proqramda təsdiqləyin. Açılmadısa, mesajı birbaşa e-poçt ünvanıma göndərə bilərsiniz.",
+    "socialsLabel": "Sosial şəbəkələr"
   },
   "cv": {
-    "eyebrow": "03 / Təcrübə və təhsil",
     "title": "Öyrənirəm. Qururam. İnkişaf edirəm.",
     "intro": "Real layihələrdə qazandığım təcrübə, istifadə etdiyim texnologiyalar və peşəkar yolum.",
     "download": "CV-ni yüklə",
@@ -101,7 +99,7 @@
     "location": "Sumqayıt, Azərbaycan",
     "skills": "Texniki bacarıqlar",
     "languages": "Dillər",
-    "languageList": "Azərbaycan dili — ana dili; Rus dili — yaxşı; İngilis dili — Pre-Intermediate.",
+    "languageList": "Azərbaycan dili — ana dili; Rus dili — yaxşı; İngilis dili — orta səviyyə (Intermediate).",
     "experience": "İş təcrübəsi",
     "clomniDate": "İyul 2026",
     "clomniName": "Clomni",
@@ -135,7 +133,6 @@
     "certificateList": "Code Academy — Software Development High Honour\nTechnest Codinarium — Web Programming\nCertiport — IT Specialist: HTML and CSS\nCoursera — Principles of UX/UI Design\nDataCamp — Introduction to Git / Intermediate Git\nCode8 Hackathon — 6–8 dekabr 2024"
   },
   "blog": {
-    "eyebrow": "02 / Qeydlər",
     "title": "İnterfeysin o biri tərəfi.",
     "intro": "Frontend, dizayn və istifadəçi təcrübəsi haqqında qısa praktik qeydlər.",
     "read": "Oxumağa davam et",
@@ -225,10 +222,8 @@
   },
   "services": {
     "metaTitle": "Xidmətlər",
-    "eyebrow": "05 / Xidmətlər",
     "title": "İdeyadan işlək interfeysə.",
-    "intro": "React və Next.js ilə sürətli, əlçatan və çoxdilli veb məhsullar qururam. Sizin layihəniz üçün görə biləcəyim işlər bunlardır.",
-    "listEyebrow": "Nə edə bilərəm",
+    "intro": "React və Next.js ilə sürətli, əlçatan və çoxdilli veb məhsullar qurur, Figma-da dizayn edir və AI ilə video hazırlayıram. Sizin layihəniz üçün görə biləcəyim işlər bunlardır.",
     "listTitle": "Təklif etdiyim xidmətlər",
     "tagsLabel": "Texnologiyalar",
     "items": {
@@ -263,9 +258,20 @@
       "pwa": {
         "title": "PWA və oflayn rejim",
         "text": "Service Worker ilə keşləmə, internet olmadan da açılan səhifələr və tətbiq kimi quraşdırıla bilən veb saytlar."
+      },
+      "uiux": {
+        "title": "Figma-da UI/UX dizayn",
+        "text": "İstifadəçi axınları, wireframe və prototiplərdən hazır dizayn sisteminə qədər — Figma-da aydın və müasir interfeyslər hazırlayıram."
+      },
+      "aivideo": {
+        "title": "AI ilə video hazırlanması",
+        "text": "Brendiniz üçün süni intellektlə promo və reels videoları: ssenari, vizual və səsləndirmə bir yerdə."
+      },
+      "seo": {
+        "title": "SEO optimizasiyası",
+        "text": "Texniki SEO, metadata və Open Graph, sitemap, semantik struktur və Core Web Vitals ilə saytınız axtarışda daha yaxşı görünür."
       }
     },
-    "processEyebrow": "İş prosesi",
     "processTitle": "Birlikdə necə işləyirik",
     "steps": {
       "discuss": {
@@ -287,16 +293,18 @@
     },
     "ctaTitle": "Layihəniz var? Gəlin danışaq.",
     "ctaText": "Qısa məlumat göndərin, sizə uyğun həlli birlikdə tapaq.",
-    "cta": "Əlaqə saxlayın"
+    "cta": "Əlaqə saxlayın",
+    "groups": {
+      "dev": "Proqramlaşdırma",
+      "design": "Dizayn və kreativ",
+      "growth": "Performans və SEO"
+    }
   },
   "projectsPage": {
     "metaTitle": "Layihələr",
-    "eyebrow": "06 / Layihələr",
     "title": "Qurduğum işlər.",
     "intro": "Kommersiya platformalarından şəxsi və açıq mənbəli layihələrə qədər — hər birində dizaynı işlək məhsula çevirmişəm.",
-    "featuredEyebrow": "Seçilmiş",
     "featuredTitle": "Əsas layihələr",
-    "moreEyebrow": "Arxiv",
     "moreTitle": "Digər layihələr",
     "imageAlt": "{name} layihəsinin ekran görüntüsü",
     "noPublicLink": "İctimai keçid mövcud deyil.",
@@ -318,26 +326,31 @@
       "hubfolio": "HTML, CSS və Vanilla JS ilə qurulmuş portfolio saytı: scroll əsaslı animasiyalar və təmiz, responsiv dizayn.",
       "aionAnalyze": "PDF faylları yükləyib məzmununu oxumağa və qısa cavab almağa imkan verən analiz aləti. Frontend Next.js, backend isə Node.js və FastAPI ilə qurulub.",
       "voice": "Səs əmrləri ilə idarə olunan interaktiv elementlər: səhifənin yuxarısına qalxmaq, düyməni fırlatmaq, tullandırmaq və topu ekranda təpikləmək. Next.js və Annyang vasitəsilə Web Speech API istifadə olunub.",
-      "metraj": "Mənzil alqı-satqısı üçün veb sayt. Frontend hissəsini mən hazırlamışam, backend-də Fastify istifadə olunub."
+      "metraj": "Mənzil alqı-satqısı üçün veb sayt. Frontend hissəsini mən hazırlamışam, backend-də Fastify istifadə olunub.",
+      "goldHospital": "Xəstəxana üçün onlayn qəbula yazılma saytı.",
+      "glabbe": "Mütəxəssislər üçün görüşlərin idarə olunması üzrə full-stack platforma.",
+      "loyalty": "Sadiqlik (loyalty) sistemi: React əsaslı PWA və React Native ilə mobil tətbiq.",
+      "boulvard": "Responsiv interfeysli klinika idarəetmə sistemi.",
+      "foodlens": "Qida təhlükəsizliyi üçün süni intellektlə risk analizi aparan mobil tətbiq.",
+      "evisa": "Səyahətçilər üçün onlayn elektron viza müraciəti platforması.",
+      "clomni": "Clomni saytının rebrendinqi üzərində işləyən komandanın üzvü olmuşam.",
+      "alfinx": "Biznes avtomatlaşdırması üçün süni intellekt əsaslı həllər hazırlayan AlfinX şirkətində front-end təcrübəsi.",
+      "walkstep": "WalkStep üçün landing səhifəsi."
     },
     "ctaTitle": "Növbəti layihə sizinki ola bilər.",
     "ctaText": "İdeyanızı danışın, onu birlikdə işlək məhsula çevirək.",
-    "cta": "Əlaqə saxlayın"
+    "cta": "Əlaqə saxlayın",
+    "alsoBuilt": "Digər işlər"
   },
   "about": {
     "metaTitle": "Haqqımda",
-    "eyebrow": "07 / Haqqımda",
-    "title": "Salam, mən Arzuyam.",
-    "intro": "React və Next.js ilə işləyən front-end developerəm. Dizaynı diqqətlə, kodu səliqəli yazmağı sevirəm.",
-    "bioEyebrow": "Qısaca",
+    "title": "Haqqımda",
     "bioTitle": "Front-end inkişafı, dizayna diqqət və öyrənmə həvəsi.",
     "bio1": "React, Redux, Tailwind CSS və Material UI ilə front-end inkişafı üzrə ixtisaslaşıram. Next.js ilə real platformalarda — INGRI və VRIBBE kimi layihələrdə — interfeyslər qurmuşam.",
     "bio2": "Node.js, Express.js və MongoDB ilə backend təcrübəm də var. Bu, frontend-i API və məlumat strukturu ilə daha yaxşı əlaqələndirməyə kömək edir.",
     "bio3": "Məqsədim full-stack developer olmaq və təsirli rəqəmsal məhsullar qurmaqdır. Hazırda TypeScript, qabaqcıl Next.js və React Native biliklərimi dərinləşdirirəm.",
     "factEmail": "E-poçt",
-    "stackEyebrow": "Texnologiyalar",
     "stackTitle": "İş alətlərim",
-    "journeyEyebrow": "Yolum",
     "journeyTitle": "Təcrübə və təhsil",
     "ctaTitle": "Birlikdə işləyək?",
     "ctaText": "Yeni layihə, komanda və ya əməkdaşlıq təklifi üçün yazın.",
@@ -348,6 +361,39 @@
       "backend": "Backend",
       "design": "Dizayn və alətlər",
       "ai": "Süni intellekt alətləri"
+    },
+    "langs": {
+      "az": "Azərbaycan dili — ana dili",
+      "en": "İngilis dili — orta səviyyə (Intermediate)",
+      "ru": "Rus dili — yaxşı"
+    }
+  },
+  "needPicker": {
+    "title": "Nəyə ehtiyacınız var?",
+    "text": "Birini seçin — mesajınızın başlanğıcını sizin üçün hazırlayım, qalanını əlaqə formasında yazın.",
+    "options": {
+      "website": {
+        "title": "Sayt",
+        "text": "Landing, korporativ sayt və ya veb tətbiq"
+      },
+      "design": {
+        "title": "Dizayn",
+        "text": "Figma-da UI/UX dizayn"
+      },
+      "video": {
+        "title": "Video",
+        "text": "AI ilə promo və reels videoları"
+      },
+      "seo": {
+        "title": "SEO",
+        "text": "Axtarışda daha yaxşı görünmək"
+      }
+    },
+    "prefill": {
+      "website": "Salam, Arzu! Mənə sayt lazımdır. Layihə haqqında: ",
+      "design": "Salam, Arzu! Figma-da dizayn sifariş etmək istəyirəm. Layihə haqqında: ",
+      "video": "Salam, Arzu! AI ilə video hazırlatmaq istəyirəm. İdeya: ",
+      "seo": "Salam, Arzu! Saytımın SEO-su ilə bağlı köməyə ehtiyacım var. Saytın ünvanı: "
     }
   }
 }

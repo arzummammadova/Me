@@ -6,6 +6,7 @@ import { ServiceIcon } from "@/components/service-icon";
 import { Link } from "@/i18n/navigation";
 import { profile } from "@/data/profile";
 import { techGroups } from "@/data/site";
+import { Flag } from "@/components/header";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
-  return { title: t("metaTitle"), description: t("intro") };
+  return { title: t("metaTitle"), description: t("bio1") };
 }
 
 const experience = ["clomni", "bein", "alfin", "jobing"] as const;
@@ -34,7 +35,6 @@ export default async function About({
     <PageShell section="about">
       <section className="about-intro">
         <div className="about-bio">
-          <p className="eyebrow">{t("bioEyebrow")}</p>
           <h2>{t("bioTitle")}</h2>
           <p>{t("bio1")}</p>
           <p>{t("bio2")}</p>
@@ -54,7 +54,16 @@ export default async function About({
             </div>
             <div>
               <dt>{cv("languages")}</dt>
-              <dd>{cv("languageList")}</dd>
+              <dd>
+                <ul className="lang-list">
+                  {(["az", "en", "ru"] as const).map((code) => (
+                    <li key={code}>
+                      <Flag locale={code} />
+                      <span>{t(`langs.${code}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </dd>
             </div>
           </dl>
           <Link className="pill-button dark about-card-cta" href="/contact">
@@ -66,7 +75,6 @@ export default async function About({
 
       <section className="stack-section" aria-labelledby="stack-title">
         <div className="section-head">
-          <p className="eyebrow">{t("stackEyebrow")}</p>
           <h2 id="stack-title">{t("stackTitle")}</h2>
         </div>
         <div className="stack-groups">
@@ -104,7 +112,6 @@ export default async function About({
 
       <section className="timeline-section" aria-labelledby="journey-title">
         <div className="section-head">
-          <p className="eyebrow">{t("journeyEyebrow")}</p>
           <h2 id="journey-title">{t("journeyTitle")}</h2>
         </div>
         <div className="timeline-columns">

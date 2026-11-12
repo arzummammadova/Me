@@ -30,7 +30,6 @@ export default async function WhyMe({
         </div>
       </div>
       <section className="skills-section">
-        <p className="eyebrow">{t("toolbox")}</p>
         <h2>{t("skillsTitle")}</h2>
         <div className="skill-tags">
           {skills.map((s) => (

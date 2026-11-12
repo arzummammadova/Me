@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
-function Flag({ locale }: { locale: string }) {
+export function Flag({ locale }: { locale: string }) {
   if (locale === "az") {
     return (
       <svg viewBox="0 0 36 24" className="lang-flag" aria-hidden="true">

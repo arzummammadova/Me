@@ -1,8 +1,11 @@
+import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { ContactForm } from "@/components/contact-form";
-import { profile } from "@/data/profile";
-import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
+import { ContactFormWithTopic } from "@/components/contact-form-topic";
+import { ChannelIcon } from "@/components/brand-icons";
+import { profile, socials } from "@/data/profile";
+
 export default async function Contact({
   params,
 }: {
@@ -16,28 +19,50 @@ export default async function Contact({
       <div className="contact-grid">
         <aside className="contact-details">
           <p>{t("aside")}</p>
-          <a href={`mailto:${profile.email}`}>
-            <Mail size={19} />
-            {profile.email}
-          </a>
-          <a href="tel:+994555140199">
-            <Phone size={19} />
-            {profile.phone}
-          </a>
-          <span>
-            <MapPin size={19} />
-            {t("location")}
-          </span>
-          <div className="contact-socials">
-            <a href={profile.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn <ArrowUpRight size={16} />
-            </a>
-            <a href={profile.github} target="_blank" rel="noreferrer">
-              GitHub <ArrowUpRight size={16} />
-            </a>
-          </div>
+          <ul className="contact-channels">
+            <li>
+              <a href={`mailto:${profile.email}`}>
+                <span className="channel-icon"><ChannelIcon name="email" /></span>
+                <span>{profile.email}</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+994555140199">
+                <span className="channel-icon"><ChannelIcon name="phone" /></span>
+                <span>{profile.phone}</span>
+              </a>
+            </li>
+            <li>
+              <span className="channel-static">
+                <span className="channel-icon"><ChannelIcon name="location" /></span>
+                <span>{t("location")}</span>
+              </span>
+            </li>
+          </ul>
+          <p className="socials-label">{t("socialsLabel")}</p>
+          <ul className="contact-social-grid">
+            {socials.map((s) => (
+              <li key={s.id}>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={"social-chip social-" + s.id}
+                  aria-label={`${s.label}: ${s.handle}`}
+                >
+                  <span className="channel-icon"><ChannelIcon name={s.id} /></span>
+                  <span className="social-text">
+                    <strong>{s.label}</strong>
+                    <span>{s.handle}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </aside>
-        <ContactForm />
+        <Suspense fallback={<ContactForm />}>
+          <ContactFormWithTopic />
+        </Suspense>
       </div>
     </PageShell>
   );

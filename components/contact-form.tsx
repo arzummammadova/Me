@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
 import { profile } from "@/data/profile";
-export function ContactForm() {
+export function ContactForm({ initialMessage = "" }: { initialMessage?: string }) {
   const t = useTranslations("contact");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [ready, setReady] = useState(false);
@@ -56,6 +56,7 @@ export function ContactForm() {
           {t("message")} <span>*</span>
         </label>
         <textarea
+              defaultValue={initialMessage}
           id="message"
           name="message"
           rows={6}

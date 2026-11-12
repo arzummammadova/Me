@@ -3,15 +3,20 @@
 // AION Analyze, Voice Control Demo and Metraj.az come from the old portfolio
 // (arzumammadova.vercel.app and its public /api/projects endpoint).
 
+export const serviceGroups = ["dev", "design", "growth"] as const;
+
 export const services = [
-  { id: "web", icon: "code", tags: ["Next.js", "React", "TypeScript", "REST API"] },
-  { id: "figma", icon: "pen", tags: ["Figma", "Tailwind CSS", "SCSS", "Responsive"] },
-  { id: "landing", icon: "spark", tags: ["GSAP", "ScrollTrigger", "Next.js"] },
-  { id: "dashboard", icon: "grid", tags: ["React", "Redux Toolkit", "Zustand", "React Hook Form"] },
-  { id: "performance", icon: "gauge", tags: ["Core Web Vitals", "srcset", "lazy", "fetchpriority"] },
-  { id: "a11y", icon: "eye", tags: ["Semantic HTML", "ARIA", "Focus", "Keyboard"] },
-  { id: "i18n", icon: "globe", tags: ["next-intl", "AZ / EN / RU", "Intl API"] },
-  { id: "pwa", icon: "offline", tags: ["Service Worker", "Web Worker", "Cache API", "PWA"] },
+  { id: "web", group: "dev", icon: "code", tags: ["Next.js", "React", "TypeScript", "REST API"] },
+  { id: "figma", group: "dev", icon: "pen", tags: ["Figma", "Tailwind CSS", "SCSS", "Responsive"] },
+  { id: "dashboard", group: "dev", icon: "grid", tags: ["React", "Redux Toolkit", "Zustand", "React Hook Form"] },
+  { id: "i18n", group: "dev", icon: "globe", tags: ["next-intl", "AZ / EN / RU", "Intl API"] },
+  { id: "pwa", group: "dev", icon: "offline", tags: ["Service Worker", "Web Worker", "Cache API", "PWA"] },
+  { id: "uiux", group: "design", icon: "uiux", tags: ["Figma", "Wireframe", "Prototype", "Design system"] },
+  { id: "aivideo", group: "design", icon: "aivideo", tags: ["AI video", "Reels", "Promo", "Higgsfield", "ElevenLabs"] },
+  { id: "landing", group: "design", icon: "spark", tags: ["GSAP", "ScrollTrigger", "Next.js"] },
+  { id: "performance", group: "growth", icon: "gauge", tags: ["Core Web Vitals", "srcset", "lazy", "fetchpriority"] },
+  { id: "seo", group: "growth", icon: "seo", tags: ["Technical SEO", "Metadata", "Sitemap", "Open Graph"] },
+  { id: "a11y", group: "growth", icon: "eye", tags: ["Semantic HTML", "ARIA", "Focus", "Keyboard"] },
 ] as const;
 
 export const processSteps = ["discuss", "design", "develop", "launch"] as const;
@@ -21,7 +26,7 @@ export type ProjectLink = { kind: "live" | "github" | "figma" | "video" | "npm";
 export const portfolioProjects: {
   id: string;
   name: string;
-  image: string;
+  image?: string;
   featured?: boolean;
   tech: string[];
   links: ProjectLink[];
@@ -112,7 +117,64 @@ export const portfolioProjects: {
     tech: ["Fastify", "Tailwind CSS", "Responsive Design"],
     links: [],
   },
+  {
+    id: "goldHospital",
+    name: "Gold Hospital",
+    tech: ["Next.js", "Tailwind CSS", "FormSubmit"],
+    links: [],
+  },
+  {
+    id: "glabbe",
+    name: "GLABBE",
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
+    links: [],
+  },
+  {
+    id: "loyalty",
+    name: "Loyalty System",
+    tech: ["React", "Tailwind CSS", "shadcn/ui", "Zustand", "PWA", "React Native", "NativeWind", "Expo"],
+    links: [],
+  },
+  {
+    id: "boulvard",
+    name: "Boulvard Clinic",
+    tech: ["Next.js", "Tailwind CSS", "i18n"],
+    links: [],
+  },
+  {
+    id: "foodlens",
+    name: "FoodLens",
+    tech: ["React Native", "Node.js", "AI integration"],
+    links: [],
+  },
+  {
+    id: "evisa",
+    name: "Evisa",
+    tech: [],
+    links: [],
+  },
+  {
+    id: "clomni",
+    name: "Clomni",
+    tech: [],
+    links: [],
+  },
+  {
+    id: "alfinx",
+    name: "AlfinX",
+    tech: [],
+    links: [],
+  },
+  {
+    id: "walkstep",
+    name: "WalkStep",
+    tech: [],
+    links: [],
+  },
 ];
+
+// Smaller projects listed on the CV without details.
+export const alsoBuilt = ["ItsTour", "Karma", "HexasShop", "OnlineBookShop"];
 
 // Tech stack, grouped. Most icons come from the old portfolio site; the AI
 // tool, TypeScript, GSAP and Zustand icons are the services' official favicons.
@@ -127,15 +189,23 @@ export const techGroups: { id: "frontend" | "backend" | "design" | "ai"; items: 
       { name: "TypeScript", icon: "typescript.png" },
       { name: "React", icon: "react.svg.png" },
       { name: "Next.js", icon: "next.png" },
-      { name: "Redux", icon: "redux.png" },
+      { name: "React Native", icon: "reactnative.png" },
+      { name: "Redux Toolkit", icon: "redux.png" },
       { name: "Zustand", icon: "zustand.png" },
+      { name: "React Router", icon: "reactrouter.png" },
       { name: "Tailwind CSS", icon: "tailwind.png" },
       { name: "SASS / SCSS", icon: "sass.png" },
       { name: "Bootstrap", icon: "bootstrap.png" },
       { name: "Material UI", icon: "material.png" },
+      { name: "shadcn/ui", icon: "shadcn.png" },
+      { name: "Ant Design" },
       { name: "GSAP", icon: "gsap.png" },
       { name: "next-intl" },
+      { name: "React Hook Form", icon: "rhf.png" },
       { name: "Formik & Yup", icon: "formikyup.png" },
+      { name: "Axios", icon: "axios.png" },
+      { name: "PWA" },
+      { name: "Vite", icon: "vite.png" },
     ],
   },
   {
@@ -143,9 +213,13 @@ export const techGroups: { id: "frontend" | "backend" | "design" | "ai"; items: 
     items: [
       { name: "Node.js", icon: "nodejs.png" },
       { name: "Express.js", icon: "express.png" },
+      { name: "NestJS", icon: "nestjs.png" },
+      { name: "Supabase", icon: "supabase.png" },
       { name: "MongoDB", icon: "mongo.png" },
+      { name: "REST API" },
       { name: "JWT", icon: "jwt.png" },
-      { name: "Postman", icon: "postman.webp" },
+      { name: "Joi" },
+      { name: "Cloudflare", icon: "cloudflare.png" },
     ],
   },
   {
@@ -153,17 +227,30 @@ export const techGroups: { id: "frontend" | "backend" | "design" | "ai"; items: 
     items: [
       { name: "Figma", icon: "figma.png" },
       { name: "Git", icon: "git.webp" },
+      { name: "GitHub", icon: "github.png" },
+      { name: "GitLab", icon: "gitlab.png" },
+      { name: "VS Code", icon: "vscode.png" },
+      { name: "Chrome DevTools", icon: "devtools.png" },
+      { name: "Postman", icon: "postman.webp" },
+      { name: "npm", icon: "npm.png" },
       { name: "Vercel", icon: "vercel.png" },
       { name: "Render", icon: "render.jpg" },
+      { name: "Slack", icon: "slack.png" },
+      { name: "Linear", icon: "linear.png" },
+      { name: "Trello", icon: "trello.png" },
+      { name: "Notion", icon: "notion.png" },
+      { name: "YouGile", icon: "yougile.png" },
     ],
   },
   {
     id: "ai",
     items: [
       { name: "Cursor", icon: "cursor.png" },
+      { name: "Claude Code", icon: "claude.png" },
+      { name: "GitHub Copilot", icon: "copilot.png" },
+      { name: "Antigravity", icon: "antigravity.png" },
       { name: "Codex", icon: "codex.png" },
       { name: "ChatGPT", icon: "chatgpt.png" },
-      { name: "Claude", icon: "claude.png" },
       { name: "Grok", icon: "grok.png" },
       { name: "ElevenLabs", icon: "elevenlabs.png" },
       { name: "Higgsfield", icon: "higgsfield.png" },

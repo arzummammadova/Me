@@ -56,7 +56,6 @@
     "visit": "View project"
   },
   "why": {
-    "eyebrow": "01 / About me",
     "title": "Thoughtful details. Working products.",
     "intro": "Clean code, carefully crafted interfaces and a collaborative mindset. That's the approach I bring to every project.",
     "portraitAlt": "Front-end developer Arzu Mammadova",
@@ -73,7 +72,6 @@
     "contact": "Get in touch"
   },
   "contact": {
-    "eyebrow": "04 / Contact",
     "title": "Let's talk.",
     "intro": "Have an idea, a project or an opportunity to collaborate? I'd love to hear about it.",
     "aside": "Tell me a little about your project, its goals, the existing design and what you're looking for.",
@@ -90,10 +88,10 @@
     "formNote": "This form opens a prepared message in your email app. You confirm sending there. If you haven't configured an email app, write directly to the address shown here.",
     "send": "Open in email",
     "subject": "Portfolio enquiry — {name}",
-    "ready": "Your message is prepared and passed to your email app. Please confirm sending there. If it didn't open, you can send your message directly to my email address."
+    "ready": "Your message is prepared and passed to your email app. Please confirm sending there. If it didn't open, you can send your message directly to my email address.",
+    "socialsLabel": "Find me online"
   },
   "cv": {
-    "eyebrow": "03 / Experience & education",
     "title": "Learning. Building. Growing.",
     "intro": "My experience on real projects, the technologies I work with and my professional journey.",
     "download": "Download CV",
@@ -101,7 +99,7 @@
     "location": "Sumgait, Azerbaijan",
     "skills": "Technical skills",
     "languages": "Languages",
-    "languageList": "Azerbaijani — native; Russian — good; English — pre-intermediate.",
+    "languageList": "Azerbaijani — native; Russian — good; English — Intermediate.",
     "experience": "Experience",
     "clomniDate": "July 2026",
     "clomniName": "Clomni",
@@ -135,7 +133,6 @@
     "certificateList": "Code Academy — Software Development High Honour\nTechnest Codinarium — Web Programming\nCertiport — IT Specialist: HTML and CSS\nCoursera — Principles of UX/UI Design\nDataCamp — Introduction to Git / Intermediate Git\nCode8 Hackathon — December 6–8, 2024"
   },
   "blog": {
-    "eyebrow": "02 / Notes",
     "title": "Behind the interface.",
     "intro": "Short, practical notes on frontend development, design and the user experience.",
     "read": "Continue reading",
@@ -225,10 +222,8 @@
   },
   "services": {
     "metaTitle": "Services",
-    "eyebrow": "05 / Services",
     "title": "From idea to a working interface.",
-    "intro": "I build fast, accessible and multilingual web products with React and Next.js. Here is what I can do for your project.",
-    "listEyebrow": "What I can do",
+    "intro": "I build fast, accessible and multilingual web products with React and Next.js, design in Figma and create videos with AI. Here is what I can do for your project.",
     "listTitle": "Services I offer",
     "tagsLabel": "Technologies",
     "items": {
@@ -263,9 +258,20 @@
       "pwa": {
         "title": "PWA & offline mode",
         "text": "Caching with Service Workers, pages that open without a connection, and websites that can be installed like an app."
+      },
+      "uiux": {
+        "title": "UI/UX design in Figma",
+        "text": "From user flows, wireframes and prototypes to a ready design system — clear, modern interfaces designed in Figma."
+      },
+      "aivideo": {
+        "title": "AI video generation",
+        "text": "Promo and reels videos for your brand made with AI: script, visuals and voice-over in one place."
+      },
+      "seo": {
+        "title": "SEO optimization",
+        "text": "Technical SEO, metadata and Open Graph, sitemaps, semantic structure and Core Web Vitals so your site shows up better in search."
       }
     },
-    "processEyebrow": "Process",
     "processTitle": "How we work together",
     "steps": {
       "discuss": {
@@ -287,16 +293,18 @@
     },
     "ctaTitle": "Have a project? Let's talk.",
     "ctaText": "Send a short brief and we'll find the right solution together.",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "groups": {
+      "dev": "Development",
+      "design": "Design & creative",
+      "growth": "Performance & SEO"
+    }
   },
   "projectsPage": {
     "metaTitle": "Projects",
-    "eyebrow": "06 / Projects",
     "title": "Things I've built.",
     "intro": "From commercial platforms to personal and open-source projects — in each one I turned a design into a working product.",
-    "featuredEyebrow": "Featured",
     "featuredTitle": "Main projects",
-    "moreEyebrow": "Archive",
     "moreTitle": "More projects",
     "imageAlt": "Screenshot of the {name} project",
     "noPublicLink": "No public link available.",
@@ -318,26 +326,31 @@
       "hubfolio": "A portfolio website built with HTML, CSS and Vanilla JS, with engaging scroll-based animations and a clean, responsive design.",
       "aionAnalyze": "A PDF analysis tool: upload PDF files to read their content and get a concise answer. The frontend is built with Next.js, the backend with Node.js and FastAPI.",
       "voice": "A Next.js app with elements controlled by speech: scroll to the top, rotate a button, make a button jump and kick a ball across the screen. Uses the Web Speech API through Annyang.",
-      "metraj": "A website for buying and selling apartments. I built the frontend; the backend uses Fastify."
+      "metraj": "A website for buying and selling apartments. I built the frontend; the backend uses Fastify.",
+      "goldHospital": "A hospital appointment booking website.",
+      "glabbe": "A full-stack appointment management platform for professionals.",
+      "loyalty": "A loyalty system: a React-based PWA plus a React Native mobile app.",
+      "boulvard": "A clinic management system with a responsive interface.",
+      "foodlens": "An AI-powered risk analysis app for food safety.",
+      "evisa": "An online electronic visa application platform for travelers.",
+      "clomni": "I was part of the team behind the Clomni website rebranding.",
+      "alfinx": "Front-end internship at AlfinX, a company building AI-based solutions for business automation.",
+      "walkstep": "A landing page for WalkStep."
     },
     "ctaTitle": "Your project could be next.",
     "ctaText": "Tell me about your idea and let's turn it into a working product.",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "alsoBuilt": "Also built"
   },
   "about": {
     "metaTitle": "About",
-    "eyebrow": "07 / About",
-    "title": "Hi, I'm Arzu.",
-    "intro": "A front-end developer working with React and Next.js. I care about careful design and clean code.",
-    "bioEyebrow": "In short",
+    "title": "About",
     "bioTitle": "Front-end development, an eye for design and a drive to learn.",
     "bio1": "I specialize in front-end development with React, Redux, Tailwind CSS and Material UI. With Next.js I have built interfaces for real platforms such as INGRI and VRIBBE.",
     "bio2": "I also have backend experience with Node.js, Express.js and MongoDB, which helps me connect the frontend with APIs and data structures.",
     "bio3": "My goal is to become a full-stack developer and build impactful digital products. I'm currently deepening my knowledge of TypeScript, advanced Next.js and React Native.",
     "factEmail": "Email",
-    "stackEyebrow": "Technologies",
     "stackTitle": "My toolbox",
-    "journeyEyebrow": "Journey",
     "journeyTitle": "Experience & education",
     "ctaTitle": "Shall we work together?",
     "ctaText": "Write to me about a new project, a team role or a collaboration.",
@@ -348,6 +361,39 @@
       "backend": "Backend",
       "design": "Design & tools",
       "ai": "AI tools"
+    },
+    "langs": {
+      "az": "Azerbaijani — native",
+      "en": "English — Intermediate",
+      "ru": "Russian — good"
+    }
+  },
+  "needPicker": {
+    "title": "What do you need?",
+    "text": "Pick one — I'll start your message for you, then add the details in the contact form.",
+    "options": {
+      "website": {
+        "title": "Website",
+        "text": "Landing page, company site or web app"
+      },
+      "design": {
+        "title": "Design",
+        "text": "UI/UX design in Figma"
+      },
+      "video": {
+        "title": "Video",
+        "text": "AI promo videos and reels"
+      },
+      "seo": {
+        "title": "SEO",
+        "text": "Get found in search"
+      }
+    },
+    "prefill": {
+      "website": "Hi Arzu! I need a website. A few words about the project: ",
+      "design": "Hi Arzu! I'd like to order a design in Figma. A few words about the project: ",
+      "video": "Hi Arzu! I'd like an AI-generated video. The idea in short: ",
+      "seo": "Hi Arzu! I need help with my site's SEO. The site address: "
     }
   }
 }

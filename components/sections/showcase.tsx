@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { gsap } from "gsap";
 import { Asset } from "@/components/asset";
 import { projects } from "@/data/profile";
+import { ServiceIcon } from "@/components/service-icon";
 
 export function Showcase({
   index,
@@ -86,6 +87,7 @@ export function Showcase({
         <div className="showcase-controls">
           <button className="pill-button next-pill" onClick={onNext}>
             {t("next")}
+            <ServiceIcon name="arrowRight" size={18} />
           </button>
         </div>
       </div>

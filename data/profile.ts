@@ -6,6 +6,12 @@ export const profile = {
   github: "https://github.com/arzummammadova",
   cv: "/documents/Arzu-Mammadova-CV.pdf",
 };
+export const socials = [
+  { id: "linkedin", label: "LinkedIn", handle: "Arzu Mammadova", url: "https://www.linkedin.com/in/arzu-mammadova-892b25269/" },
+  { id: "github", label: "GitHub", handle: "@arzummammadova", url: "https://github.com/arzummammadova" },
+  { id: "instagram", label: "Instagram", handle: "@arzu.codes", url: "https://instagram.com/arzu.codes" },
+  { id: "medium", label: "Medium", handle: "@arzuuimammadova", url: "https://medium.com/@arzuuimammadova" },
+] as const;
 export const projects = [
   {
     id: "ingri",
