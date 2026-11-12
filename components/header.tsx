@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -39,17 +40,39 @@ function Flag({ locale }: { locale: string }) {
   );
 }
 
+const navLinks = [
+  { href: "/about", key: "about" },
+  { href: "/projects", key: "projects" },
+  { href: "/services", key: "services" },
+  { href: "/blog", key: "blog" },
+  { href: "/contact", key: "contact" },
+  { href: "/cv", key: "cv" },
+] as const;
+
 export function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const locale = useLocale();
   const home = pathname === "/";
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
   return (
     <>
       <a className="skip-link" href="#main">
         {t("skip")}
       </a>
-      <header className={"site-header " + (home ? "home-header" : "page-header")}>
+      <header
+        className={
+          "site-header " + (home ? "home-header" : "page-header") + (open ? " menu-open" : "")
+        }
+      >
         {!home && (
           <Link href="/" className="home-mark" aria-label={t("home")}>
             <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
@@ -65,28 +88,22 @@ export function Header() {
             </svg>
           </Link>
         )}
-        <nav aria-label={t("navigation")} className="header-nav">
-          <Link
-            className="header-block"
-            href="/blog"
-            aria-current={pathname.startsWith("/blog") ? "page" : undefined}
-          >
-            {t("blog")}
-          </Link>
-          <Link
-            className="header-block"
-            href="/contact"
-            aria-current={pathname === "/contact" ? "page" : undefined}
-          >
-            {t("contact")}
-          </Link>
-          <Link
-            className="header-block"
-            href="/cv"
-            aria-current={pathname === "/cv" ? "page" : undefined}
-          >
-            {t("cv")}
-          </Link>
+        <nav aria-label={t("navigation")} className="header-nav" id="site-nav">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              className="header-block"
+              href={link.href}
+              onClick={() => setOpen(false)}
+              aria-current={
+                pathname === link.href || pathname.startsWith(link.href + "/")
+                  ? "page"
+                  : undefined
+              }
+            >
+              {t(link.key)}
+            </Link>
+          ))}
         </nav>
         <nav className="language-switch" aria-label={t("language")}>
           {routing.locales.map((l) => (
@@ -103,6 +120,18 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-expanded={open}
+          aria-controls="site-nav"
+          aria-label={open ? t("closeMenu") : t("menu")}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
       </header>
     </>
   );

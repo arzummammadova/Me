@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { HomeMascot } from "@/components/home-mascot";
 import "../globals.css";
 
 const inter = Inter({
@@ -44,6 +45,7 @@ export default async function LocaleLayout({
           <Header />
           {children}
           <Footer />
+          <HomeMascot />
         </NextIntlClientProvider>
       </body>
     </html>

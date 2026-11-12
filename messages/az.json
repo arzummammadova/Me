@@ -11,7 +11,12 @@
     "az": "Azərbaycan dili",
     "en": "İngilis dili",
     "ru": "Rus dili",
-    "role": "Front-End Developer"
+    "role": "Front-End Developer",
+    "services": "Xidmətlər",
+    "projects": "Layihələr",
+    "about": "Haqqımda",
+    "menu": "Menyu",
+    "closeMenu": "Menyunu bağla"
   },
   "home": {
     "intro": "Arzu ilə tanış olun",
@@ -24,7 +29,17 @@
     "outroTitle": "İdeyaları interfeysə çevirirəm.",
     "outroDescription": "Mən Arzu, front-end developerəm. React və Next.js ilə aydın, responsiv və istifadəsi rahat interfeyslər hazırlayıram. Hər detalda həm dizaynı, həm də onun necə işlədiyini düşünürəm.",
     "more": "Məni tanı",
-    "contact": "Birlikdə işləyək"
+    "contact": "Birlikdə işləyək",
+    "mascot": "Sayt sifariş et",
+    "mascotPhrases": {
+      "website": "Sayt sifariş et",
+      "design": "Dizayn sifariş et",
+      "video": "Video sifariş et",
+      "english": "İngilis dili öyrən",
+      "store": "Mağazanı aç",
+      "lessons": "Dərslərə qoşul"
+    },
+    "mascotAriaSuffix": "əlaqə səhifəsinə keç"
   },
   "showcase": {
     "title": "Seçilmiş layihələr",
@@ -207,5 +222,132 @@
   "notFound": {
     "title": "Bu səhifə tapılmadı.",
     "home": "Ana səhifəyə qayıt"
+  },
+  "services": {
+    "metaTitle": "Xidmətlər",
+    "eyebrow": "05 / Xidmətlər",
+    "title": "İdeyadan işlək interfeysə.",
+    "intro": "React və Next.js ilə sürətli, əlçatan və çoxdilli veb məhsullar qururam. Sizin layihəniz üçün görə biləcəyim işlər bunlardır.",
+    "listEyebrow": "Nə edə bilərəm",
+    "listTitle": "Təklif etdiyim xidmətlər",
+    "tagsLabel": "Texnologiyalar",
+    "items": {
+      "web": {
+        "title": "Next.js və React veb tətbiqləri",
+        "text": "Komponent əsaslı arxitektura, API inteqrasiyası, autentifikasiya və state idarəetməsi ilə böyüməyə hazır veb tətbiqlər."
+      },
+      "figma": {
+        "title": "Figma-dan piksel dəqiqliyində UI",
+        "text": "Figma maketlərini telefondan geniş monitora qədər eyni görünən, responsiv və səliqəli koda çevirirəm."
+      },
+      "landing": {
+        "title": "Animasiyalı landing və portfolio saytları",
+        "text": "GSAP və scroll animasiyaları ilə yadda qalan, amma sürətli açılan təqdimat səhifələri. Bu portfolio da belə qurulub."
+      },
+      "dashboard": {
+        "title": "Admin panellər və dashboard-lar",
+        "text": "Cədvəllər, filtrlər, formalar və statistika blokları ilə məlumatı rahat idarə etməyə imkan verən panellər — INGRI və VRIBBE-də olduğu kimi."
+      },
+      "performance": {
+        "title": "Veb performans optimizasiyası",
+        "text": "Core Web Vitals göstəricilərini yaxşılaşdırıram: srcset və sizes ilə şəkillər, lazy loading, fetchpriority və artıq JavaScript-in azaldılması."
+      },
+      "a11y": {
+        "title": "Əlçatanlıq (a11y) düzəlişləri",
+        "text": "Klaviatura ilə naviqasiya, görünən fokus, semantik HTML, düzgün kontrast və ARIA atributları ilə hər kəs üçün rahat interfeys."
+      },
+      "i18n": {
+        "title": "Çoxdilli (i18n) saytlar",
+        "text": "next-intl ilə Azərbaycan, ingilis və rus dillərində lokallaşdırılmış marşrutlar, tarix formatları və rahat dil keçidi."
+      },
+      "pwa": {
+        "title": "PWA və oflayn rejim",
+        "text": "Service Worker ilə keşləmə, internet olmadan da açılan səhifələr və tətbiq kimi quraşdırıla bilən veb saytlar."
+      }
+    },
+    "processEyebrow": "İş prosesi",
+    "processTitle": "Birlikdə necə işləyirik",
+    "steps": {
+      "discuss": {
+        "title": "Müzakirə",
+        "text": "Məqsədləri, auditoriyanı, mövcud dizaynı və müddəti birlikdə aydınlaşdırırıq."
+      },
+      "design": {
+        "title": "Dizayn və plan",
+        "text": "Figma maketini yoxlayır, səhifə strukturunu və texniki həlli planlayıram."
+      },
+      "develop": {
+        "title": "İnkişaf",
+        "text": "Responsiv, əlçatan və sürətli kod yazır, nəticəni mərhələlərlə göstərirəm."
+      },
+      "launch": {
+        "title": "Yayım",
+        "text": "Testdən sonra saytı yayımlayır, performansı yoxlayır və lazımi düzəlişləri edirəm."
+      }
+    },
+    "ctaTitle": "Layihəniz var? Gəlin danışaq.",
+    "ctaText": "Qısa məlumat göndərin, sizə uyğun həlli birlikdə tapaq.",
+    "cta": "Əlaqə saxlayın"
+  },
+  "projectsPage": {
+    "metaTitle": "Layihələr",
+    "eyebrow": "06 / Layihələr",
+    "title": "Qurduğum işlər.",
+    "intro": "Kommersiya platformalarından şəxsi və açıq mənbəli layihələrə qədər — hər birində dizaynı işlək məhsula çevirmişəm.",
+    "featuredEyebrow": "Seçilmiş",
+    "featuredTitle": "Əsas layihələr",
+    "moreEyebrow": "Arxiv",
+    "moreTitle": "Digər layihələr",
+    "imageAlt": "{name} layihəsinin ekran görüntüsü",
+    "noPublicLink": "İctimai keçid mövcud deyil.",
+    "roles": {
+      "ingri": "Dil öyrənmə platforması",
+      "vribbe": "Süni intellekt əsaslı ticarət platforması"
+    },
+    "links": {
+      "live": "Sayt",
+      "github": "GitHub",
+      "figma": "Figma",
+      "video": "Video",
+      "npm": "npm"
+    },
+    "items": {
+      "readly": "Kitab rəyləri üçün full-stack platforma: qeydiyyat və giriş, kitabları kəşf etmək, rəy yazmaq və oxu statistikasını izləmək. Kitabları filtrləmək və sıralamaq, orta reytinqə baxmaq və oxunan kitab sayına görə səviyyə qazanmaq olur. JWT autentifikasiyası, səviyyə və avatarlı profil, admin idarəetməsi var.",
+      "aionTimer": "Vaxtı səmərəli idarə etmək üçün TypeScript ilə qurulmuş veb tətbiq: məhsuldarlıq, dərs və ya istirahət üçün fərdi geri sayımlar, vizual və səsli bildirişlər, Three.js ilə 3D vizuallar. Next.js, Tailwind CSS, Redux, Zod, JWT və MongoDB istifadə olunub.",
+      "toast": "TypeScript ilə yazılmış yüngül toast bildiriş kitabxanası: fərqli animasiyalar, mövqe seçimləri və interaktiv davranışlar. Toast komponenti tam işləkdir və istənilən React/Next.js layihəsinə asanlıqla qoşulur; modal funksiyası hələ hazırlanır.",
+      "hubfolio": "HTML, CSS və Vanilla JS ilə qurulmuş portfolio saytı: scroll əsaslı animasiyalar və təmiz, responsiv dizayn.",
+      "aionAnalyze": "PDF faylları yükləyib məzmununu oxumağa və qısa cavab almağa imkan verən analiz aləti. Frontend Next.js, backend isə Node.js və FastAPI ilə qurulub.",
+      "voice": "Səs əmrləri ilə idarə olunan interaktiv elementlər: səhifənin yuxarısına qalxmaq, düyməni fırlatmaq, tullandırmaq və topu ekranda təpikləmək. Next.js və Annyang vasitəsilə Web Speech API istifadə olunub.",
+      "metraj": "Mənzil alqı-satqısı üçün veb sayt. Frontend hissəsini mən hazırlamışam, backend-də Fastify istifadə olunub."
+    },
+    "ctaTitle": "Növbəti layihə sizinki ola bilər.",
+    "ctaText": "İdeyanızı danışın, onu birlikdə işlək məhsula çevirək.",
+    "cta": "Əlaqə saxlayın"
+  },
+  "about": {
+    "metaTitle": "Haqqımda",
+    "eyebrow": "07 / Haqqımda",
+    "title": "Salam, mən Arzuyam.",
+    "intro": "React və Next.js ilə işləyən front-end developerəm. Dizaynı diqqətlə, kodu səliqəli yazmağı sevirəm.",
+    "portraitAlt": "Front-end developer Arzu Mammadova",
+    "bioEyebrow": "Qısaca",
+    "bioTitle": "Front-end inkişafı, dizayna diqqət və öyrənmə həvəsi.",
+    "bio1": "React, Redux, Tailwind CSS və Material UI ilə front-end inkişafı üzrə ixtisaslaşıram. Next.js ilə real platformalarda — INGRI və VRIBBE kimi layihələrdə — interfeyslər qurmuşam.",
+    "bio2": "Node.js, Express.js və MongoDB ilə backend təcrübəm də var. Bu, frontend-i API və məlumat strukturu ilə daha yaxşı əlaqələndirməyə kömək edir.",
+    "bio3": "Məqsədim full-stack developer olmaq və təsirli rəqəmsal məhsullar qurmaqdır. Hazırda TypeScript, qabaqcıl Next.js və React Native biliklərimi dərinləşdirirəm.",
+    "factLocation": "Məkan",
+    "factEmail": "E-poçt",
+    "statsLabel": "Qısa rəqəmlər",
+    "statProjects": "layihə",
+    "statExperience": "iş təcrübəsi",
+    "statCertificates": "sertifikat",
+    "statLanguages": "dil",
+    "stackEyebrow": "Texnologiyalar",
+    "stackTitle": "İş alətlərim",
+    "journeyEyebrow": "Yolum",
+    "journeyTitle": "Təcrübə və təhsil",
+    "ctaTitle": "Birlikdə işləyək?",
+    "ctaText": "Yeni layihə, komanda və ya əməkdaşlıq təklifi üçün yazın.",
+    "cta": "Əlaqə saxlayın"
   }
 }

@@ -13,6 +13,9 @@ export function Footer() {
       </Link>
       <nav aria-label={t("navigation")}>
         {[
+          ["/about", "about"],
+          ["/projects", "projects"],
+          ["/services", "services"],
           ["/why-me", "why"],
           ["/blog", "blog"],
           ["/contact", "contact"],

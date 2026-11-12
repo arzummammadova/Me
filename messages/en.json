@@ -11,7 +11,12 @@
     "az": "Azerbaijani",
     "en": "English",
     "ru": "Russian",
-    "role": "Front-End Developer"
+    "role": "Front-End Developer",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "menu": "Menu",
+    "closeMenu": "Close menu"
   },
   "home": {
     "intro": "Meet Arzu",
@@ -24,7 +29,17 @@
     "outroTitle": "Turning ideas into interfaces.",
     "outroDescription": "I'm Arzu, a front-end developer. I build clear, responsive and approachable interfaces with React and Next.js. Every detail is a balance between how it looks and how it works.",
     "more": "Get to know me",
-    "contact": "Let's work together"
+    "contact": "Let's work together",
+    "mascot": "Order a website",
+    "mascotPhrases": {
+      "website": "Order a website",
+      "design": "Order a design",
+      "video": "Order a video",
+      "english": "Learn English",
+      "store": "Open your store",
+      "lessons": "Join the lessons"
+    },
+    "mascotAriaSuffix": "go to the contact page"
   },
   "showcase": {
     "title": "Selected projects",
@@ -207,5 +222,132 @@
   "notFound": {
     "title": "This page couldn't be found.",
     "home": "Back to home"
+  },
+  "services": {
+    "metaTitle": "Services",
+    "eyebrow": "05 / Services",
+    "title": "From idea to a working interface.",
+    "intro": "I build fast, accessible and multilingual web products with React and Next.js. Here is what I can do for your project.",
+    "listEyebrow": "What I can do",
+    "listTitle": "Services I offer",
+    "tagsLabel": "Technologies",
+    "items": {
+      "web": {
+        "title": "Next.js & React web apps",
+        "text": "Scalable web applications with component-based architecture, API integration, authentication and state management."
+      },
+      "figma": {
+        "title": "Pixel-perfect UI from Figma",
+        "text": "I turn Figma designs into clean, responsive code that looks right on everything from phones to wide monitors."
+      },
+      "landing": {
+        "title": "Animated landing & portfolio sites",
+        "text": "Memorable presentation pages with GSAP and scroll animations that still load fast. This portfolio is built that way."
+      },
+      "dashboard": {
+        "title": "Admin panels & dashboards",
+        "text": "Panels with tables, filters, forms and stats blocks that make data easy to manage — like in INGRI and VRIBBE."
+      },
+      "performance": {
+        "title": "Web performance optimization",
+        "text": "Improving Core Web Vitals: responsive images with srcset and sizes, lazy loading, fetchpriority and less unused JavaScript."
+      },
+      "a11y": {
+        "title": "Accessibility (a11y) fixes",
+        "text": "Keyboard navigation, visible focus, semantic HTML, proper contrast and ARIA attributes for an interface that works for everyone."
+      },
+      "i18n": {
+        "title": "Multilingual (i18n) sites",
+        "text": "Localized routes, date formats and a smooth language switch in Azerbaijani, English and Russian with next-intl."
+      },
+      "pwa": {
+        "title": "PWA & offline mode",
+        "text": "Caching with Service Workers, pages that open without a connection, and websites that can be installed like an app."
+      }
+    },
+    "processEyebrow": "Process",
+    "processTitle": "How we work together",
+    "steps": {
+      "discuss": {
+        "title": "Discussion",
+        "text": "We clarify goals, audience, existing design and timeline together."
+      },
+      "design": {
+        "title": "Design & plan",
+        "text": "I review the Figma design and plan the page structure and technical approach."
+      },
+      "develop": {
+        "title": "Development",
+        "text": "I write responsive, accessible and fast code and share progress step by step."
+      },
+      "launch": {
+        "title": "Launch",
+        "text": "After testing I deploy the site, check performance and make the needed fixes."
+      }
+    },
+    "ctaTitle": "Have a project? Let's talk.",
+    "ctaText": "Send a short brief and we'll find the right solution together.",
+    "cta": "Get in touch"
+  },
+  "projectsPage": {
+    "metaTitle": "Projects",
+    "eyebrow": "06 / Projects",
+    "title": "Things I've built.",
+    "intro": "From commercial platforms to personal and open-source projects — in each one I turned a design into a working product.",
+    "featuredEyebrow": "Featured",
+    "featuredTitle": "Main projects",
+    "moreEyebrow": "Archive",
+    "moreTitle": "More projects",
+    "imageAlt": "Screenshot of the {name} project",
+    "noPublicLink": "No public link available.",
+    "roles": {
+      "ingri": "Language learning platform",
+      "vribbe": "AI-powered commerce platform"
+    },
+    "links": {
+      "live": "Live site",
+      "github": "GitHub",
+      "figma": "Figma",
+      "video": "Video",
+      "npm": "npm"
+    },
+    "items": {
+      "readly": "A full-stack book review platform: users register, log in, explore books, write reviews and track their reading statistics. Books can be filtered and sorted, average ratings viewed, and users level up based on how many books they've read. Includes JWT authentication, a profile system with level and avatar, and admin content management.",
+      "aionTimer": "A time-management web app built with TypeScript: custom countdowns for productivity, study or rest sessions, visual and audio alerts, and immersive 3D visuals with Three.js. Built with Next.js, Tailwind CSS, Redux, Zod, JWT and MongoDB.",
+      "toast": "A lightweight toast notification library written in TypeScript, with distinctive animations, positioning options and interactive behaviors. The toast component is fully functional and easy to add to any React/Next.js project; the modal feature is still in development.",
+      "hubfolio": "A portfolio website built with HTML, CSS and Vanilla JS, with engaging scroll-based animations and a clean, responsive design.",
+      "aionAnalyze": "A PDF analysis tool: upload PDF files to read their content and get a concise answer. The frontend is built with Next.js, the backend with Node.js and FastAPI.",
+      "voice": "A Next.js app with elements controlled by speech: scroll to the top, rotate a button, make a button jump and kick a ball across the screen. Uses the Web Speech API through Annyang.",
+      "metraj": "A website for buying and selling apartments. I built the frontend; the backend uses Fastify."
+    },
+    "ctaTitle": "Your project could be next.",
+    "ctaText": "Tell me about your idea and let's turn it into a working product.",
+    "cta": "Get in touch"
+  },
+  "about": {
+    "metaTitle": "About",
+    "eyebrow": "07 / About",
+    "title": "Hi, I'm Arzu.",
+    "intro": "A front-end developer working with React and Next.js. I care about careful design and clean code.",
+    "portraitAlt": "Front-end developer Arzu Mammadova",
+    "bioEyebrow": "In short",
+    "bioTitle": "Front-end development, an eye for design and a drive to learn.",
+    "bio1": "I specialize in front-end development with React, Redux, Tailwind CSS and Material UI. With Next.js I have built interfaces for real platforms such as INGRI and VRIBBE.",
+    "bio2": "I also have backend experience with Node.js, Express.js and MongoDB, which helps me connect the frontend with APIs and data structures.",
+    "bio3": "My goal is to become a full-stack developer and build impactful digital products. I'm currently deepening my knowledge of TypeScript, advanced Next.js and React Native.",
+    "factLocation": "Location",
+    "factEmail": "Email",
+    "statsLabel": "Quick numbers",
+    "statProjects": "projects",
+    "statExperience": "work experiences",
+    "statCertificates": "certificates",
+    "statLanguages": "languages",
+    "stackEyebrow": "Technologies",
+    "stackTitle": "My toolbox",
+    "journeyEyebrow": "Journey",
+    "journeyTitle": "Experience & education",
+    "ctaTitle": "Shall we work together?",
+    "ctaText": "Write to me about a new project, a team role or a collaboration.",
+    "cta": "Get in touch"
   }
 }
