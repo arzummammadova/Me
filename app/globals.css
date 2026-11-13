@@ -3389,3 +3389,40 @@ body:has(.floating-dock) .site-footer { padding-bottom: 100px; }
 /* Clouds live in the layout; show them only on subpages (home has no .content-page). */
 body:not(:has(.content-page)) .sky-clouds { display: none; }
 /* END clouds-all */
+
+/* BEGIN dock-liquid */
+.floating-dock {
+  position: fixed;
+  isolation: isolate;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.12) 45%, rgba(255, 255, 255, 0.22) 100%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.06);
+  backdrop-filter: blur(22px) saturate(180%) brightness(1.06);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 0 18px rgba(255, 255, 255, 0.14),
+    0 18px 40px -18px rgba(8, 40, 90, 0.45),
+    0 2px 8px rgba(8, 40, 90, 0.08);
+}
+/* soft liquid sheen on the top half */
+.floating-dock::before {
+  content: "";
+  position: absolute;
+  inset: 1px 1px 50% 1px;
+  border-radius: 999px 999px 40% 40% / 999px 999px 100% 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: -1;
+}
+.dock-links a {
+  color: rgba(16, 44, 76, 0.8);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.55), 0 0 10px rgba(255, 255, 255, 0.35);
+}
+.dock-links a:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.28);
+}
+.dock-links a[aria-current="page"] { text-shadow: none; }
+/* END dock-liquid */
