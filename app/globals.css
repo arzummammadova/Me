@@ -82,6 +82,26 @@ a svg {
 .asset img {
   object-fit: contain;
 }
+.image-skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(100deg, #e7edf3 20%, #f8fbfd 40%, #e7edf3 60%);
+  background-size: 220% 100%;
+  animation: image-skeleton-shimmer 1.25s ease-in-out infinite;
+  transition: opacity .25s ease, visibility .25s ease;
+}
+.image-skeleton.is-hidden { opacity: 0; visibility: hidden; }
+.skeleton-image { opacity: 0; transition: opacity .35s ease, transform .6s cubic-bezier(.2, .8, .2, 1); }
+.skeleton-image.is-loaded { opacity: 1; }
+@keyframes image-skeleton-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .image-skeleton { animation: none; }
+}
 .site-header {
   height: 104px;
   padding: 28px 5.5%;
@@ -3244,7 +3264,7 @@ body:has(.content-page) {
 .showcase-block.layout-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; }
 .showcase-block.layout-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); align-items: start; }
 .showcase-block.layout-grid:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.showcase-shot { margin: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 26px 50px -32px rgba(8, 40, 90, .55); }
+.showcase-shot { position: relative; margin: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 26px 50px -32px rgba(8, 40, 90, .55); }
 .showcase-shot img { display: block; width: 100%; height: auto; }
 .layout-full .showcase-shot { max-width: 1180px; justify-self: center; width: 100%; }
 .project-detail-page .detail-videos { margin-top: clamp(48px, 6vw, 90px); padding: 0 clamp(8px, 4vw, 70px); }

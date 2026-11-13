@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { LoadingImage } from "@/components/loading-image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SkyClouds } from "@/components/sky-clouds";
@@ -54,7 +54,7 @@ export default async function ProjectDetails({ params }: { params: Params }) {
   const description = await describe(locale, project.id);
   const extra = t.has(`extra.${project.id}`) ? t(`extra.${project.id}`) : "";
   // FoodLens uses its wide gallery artwork in the detail view; the card cover stays list-only.
-  const hero = project.id === "foodlens" ? undefined : project.image;
+  const hero = project.id === "foodlens" ? undefined : (project.detailImage ?? project.image);
   const rest = (project.gallery ?? []).filter((src) => src !== hero);
   const blocks: ShowcaseBlock[] =
     project.showcase ??
@@ -89,7 +89,7 @@ export default async function ProjectDetails({ params }: { params: Params }) {
         <div className="page-body detail-body">
           {hero ? (
             <figure className="detail-hero">
-              <Image src={hero} alt={alt(hero)} fill priority sizes="(max-width: 900px) 92vw, 1300px" />
+              <LoadingImage src={hero} alt={alt(hero)} fill priority sizes="(max-width: 900px) 92vw, 1300px" />
             </figure>
           ) : null}
 
@@ -123,7 +123,7 @@ export default async function ProjectDetails({ params }: { params: Params }) {
             >
               {block.images.map((src) => (
                 <figure key={src} className="showcase-shot">
-                  <Image
+                  <LoadingImage
                     src={src}
                     alt={alt(src)}
                     width={1600}

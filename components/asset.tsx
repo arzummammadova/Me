@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LoadingImage } from "@/components/loading-image";
 export function Asset({
   name,
   className = "",
@@ -14,7 +14,7 @@ export function Asset({
 }) {
   return (
     <div className={`asset ${className}`}>
-      <Image
+      <LoadingImage
         src={`/assets/${name}`}
         alt={alt}
         fill

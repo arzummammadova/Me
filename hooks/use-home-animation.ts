@@ -61,18 +61,14 @@ export function useHomeAnimation(
           ".showcase-scene",
         ) as HTMLElement;
         if (!desktop) {
+          work.inert = false;
           const mobileTimeline = gsap.timeline({
             scrollTrigger: {
               trigger: work,
-              start: "top top",
-              end: "+=180%",
-              pin: true,
-              scrub: 0.8,
-              anticipatePin: 1,
+              start: "top 92%",
+              end: "top 18%",
+              scrub: 0.65,
               invalidateOnRefresh: true,
-              onUpdate: (self) => {
-                applyIndex(Math.min(projects.length - 1, Math.floor(self.progress * projects.length)));
-              },
             },
           });
           mobileTimeline
@@ -93,16 +89,15 @@ export function useHomeAnimation(
               { autoAlpha: 0, y: 16 },
               { autoAlpha: 1, y: 0, duration: 0.25 },
               0.32,
-            )
-            .to({}, { duration: 0.7 });
-          const st = mobileTimeline.scrollTrigger!;
+            );
           apiRef.current = {
             goTo(index) {
-              const y = st.start + (st.end - st.start) * ((index + 0.5) / projects.length);
-              window.scrollTo({ top: y, behavior: "smooth" });
+              applyIndex(index);
+              work.scrollIntoView({ behavior: "smooth", block: "start" });
             },
           };
           return () => {
+            work.inert = false;
             apiRef.current = null;
           };
         }

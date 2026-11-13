@@ -33,6 +33,7 @@ export const portfolioProjects: {
   id: string;
   name: string;
   image?: string;
+  detailImage?: string;
   gallery?: string[];
   showcase?: ShowcaseBlock[];
   featured?: boolean;
@@ -107,11 +108,11 @@ export const portfolioProjects: {
   {
     id: "deskPi",
     name: "DeskPi",
-    image: "/assets/projects/deskpi.png",
+    image: "/assets/projects/deskpilogo.png",
+    detailImage: "/assets/projects/deskpi.png",
     showcase: [
       { layout: "full", tone: "navy", images: ["/assets/deskpianaliz.png"] },
       { layout: "full", tone: "navy", images: ["/assets/deskpicalendarpng.png"] },
-      { layout: "full", tone: "sky", images: ["/assets/projects/deskpilogo.png"] },
     ],
     tech: [],
     links: [],

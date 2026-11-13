@@ -15,9 +15,12 @@ export function HomeExperience() {
   const scrollApi = useRef<ShowcaseScrollApi | null>(null);
   const t = useTranslations("home");
   useHomeAnimation(root, setIndex, scrollApi);
-  function goToProject(next: number) {
-    if (scrollApi.current) scrollApi.current.goTo(next);
-    else setIndex(next);
+  function revealProjects() {
+    if (scrollApi.current) scrollApi.current.goTo(0);
+    else document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+  }
+  function showNextProject() {
+    setIndex((current) => (current === projects.length - 1 ? 0 : current + 1));
   }
   return (
     <div ref={root} className="home-experience">
@@ -66,7 +69,7 @@ export function HomeExperience() {
             className="scroll-cue"
             onClick={(e) => {
               e.preventDefault();
-              goToProject(0);
+              revealProjects();
             }}
           >
             {t("scroll")} <span>↓</span>
@@ -74,7 +77,7 @@ export function HomeExperience() {
         </section>
         <Showcase
           index={index}
-          onNext={() => goToProject(index === projects.length - 1 ? 0 : index + 1)}
+          onNext={showNextProject}
         />
       </div>
     </div>
