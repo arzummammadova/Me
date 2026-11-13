@@ -3366,3 +3366,21 @@ body:has(.floating-dock) .site-footer { padding-bottom: 100px; }
 }
 .dock-back:focus-visible, .dock-links a:focus-visible, .dock-cta:focus-visible { outline-color: var(--ink); }
 /* END dock-contrast */
+
+/* BEGIN dock-size */
+.floating-dock { padding: 9px; gap: 8px; }
+.dock-back { width: 48px; height: 48px; }
+.dock-links { gap: 4px; padding: 0 6px; }
+.dock-links a { padding: 12px 18px; }
+.dock-cta { height: 48px; padding: 0 20px 0 6px; gap: 10px; }
+.dock-avatar { width: 38px; height: 38px; }
+.dock-avatar img { width: 33px; }
+@media (max-width: 560px) {
+  .floating-dock { padding: 7px; gap: 5px; }
+  .dock-back { width: 44px; height: 44px; }
+  .dock-links { gap: 2px; padding: 0 2px; }
+  .dock-links a { padding: 11px 12px; }
+  .dock-cta { height: 44px; padding: 0 4px; }
+  .dock-avatar { width: 36px; height: 36px; }
+}
+/* END dock-size */
