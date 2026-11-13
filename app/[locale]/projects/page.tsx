@@ -4,7 +4,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { ServiceIcon } from "@/components/service-icon";
 import { NeedPicker } from "@/components/need-picker";
-import { SkyClouds } from "@/components/sky-clouds";
 import { Link } from "@/i18n/navigation";
 import { portfolioProjects, projectSlug } from "@/data/site";
 
@@ -41,7 +40,6 @@ export default async function Projects({
     id === "ingri" || id === "vribbe" ? cv(`${id}Description`) : t(`items.${id}`);
   return (
     <>
-      <SkyClouds />
       <PageShell section="projectsPage">
         <ul className="project-grid unified">
           {portfolioProjects.map((p, i) => (

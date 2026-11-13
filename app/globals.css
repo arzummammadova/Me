@@ -3384,3 +3384,8 @@ body:has(.floating-dock) .site-footer { padding-bottom: 100px; }
   .dock-avatar { width: 36px; height: 36px; }
 }
 /* END dock-size */
+
+/* BEGIN clouds-all */
+/* Clouds live in the layout; show them only on subpages (home has no .content-page). */
+body:not(:has(.content-page)) .sky-clouds { display: none; }
+/* END clouds-all */

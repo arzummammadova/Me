@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { SkyClouds } from "@/components/sky-clouds";
 import { ServiceIcon } from "@/components/service-icon";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -77,7 +76,6 @@ export default async function ProjectDetails({ params }: { params: Params }) {
 
   return (
     <>
-      <SkyClouds />
       <main id="main" className="content-page projectsPage-page project-detail-page">
         <div className="page-heading detail-heading">
           <Link className="back-link" href="/projects">

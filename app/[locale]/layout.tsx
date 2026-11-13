@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/header";
+import { SkyClouds } from "@/components/sky-clouds";
 import { Footer } from "@/components/footer";
 import { HomeMascot } from "@/components/home-mascot";
 import { FloatingDock } from "@/components/floating-dock";
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={inter.variable}>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <SkyClouds />
           <Header />
           {children}
           <Footer />

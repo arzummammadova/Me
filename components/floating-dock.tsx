@@ -5,7 +5,7 @@ import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
 export const dockLinks = [
   { href: "/about", key: "about" },
-  { href: "/projects", key: "projects" },
+  { href: "/blog", key: "blog" },
   { href: "/services", key: "services" },
 ] as const;
 
