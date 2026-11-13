@@ -325,7 +325,8 @@
       "label": "Вид",
       "grid": "Сетка",
       "list": "Список"
-    }
+    },
+    "details": "Подробнее"
   },
   "projectsPage": {
     "metaTitle": "Проекты",

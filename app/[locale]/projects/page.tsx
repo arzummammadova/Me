@@ -58,6 +58,7 @@ export default async function Projects({
             list: t("view.list"),
             sortLabel: t("sort.label"),
             viewLabel: t("view.label"),
+            details: t("details"),
           }}
         />
 

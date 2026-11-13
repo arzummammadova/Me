@@ -17,6 +17,14 @@ export async function generateMetadata({
   return { title: t("metaTitle"), description: t("intro") };
 }
 
+const topicFor: Record<string, string> = {
+  uiux: "design",
+  aivideo: "video",
+  performance: "seo",
+  seo: "seo",
+  a11y: "seo",
+};
+
 export default async function Services({
   params,
 }: {
@@ -40,6 +48,7 @@ export default async function Services({
             title: t(`items.${s.id}.title`),
             subtitle: t(`items.${s.id}.sub`),
             text: t(`items.${s.id}.text`),
+            topic: topicFor[s.id] ?? "website",
           }))}
           labels={{
             filters: {
@@ -52,6 +61,7 @@ export default async function Services({
             list: t("view.list"),
             filterLabel: t("filters.label"),
             viewLabel: t("view.label"),
+            details: t("details"),
           }}
         />
       </section>

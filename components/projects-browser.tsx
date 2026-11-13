@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { ServiceIcon } from "@/components/service-icon";
+import { GridIcon, ListIcon } from "@/components/view-toggle-icons";
 
 type Item = {
   slug: string;
@@ -20,6 +22,7 @@ type Labels = {
   list: string;
   sortLabel: string;
   viewLabel: string;
+  details: string;
 };
 
 // Data order is newest first; "oldest" simply reverses it.
@@ -39,8 +42,16 @@ export function ProjectsBrowser({ items, labels }: { items: Item[]; labels: Labe
         </div>
         <div className="svc-toggle" role="group" aria-label={labels.viewLabel}>
           {(["grid", "list"] as const).map((v) => (
-            <button key={v} type="button" aria-pressed={view === v} onClick={() => setView(v)}>
-              {labels[v]}
+            <button
+              key={v}
+              type="button"
+              className="view-icon-btn"
+              aria-pressed={view === v}
+              aria-label={labels[v]}
+              title={labels[v]}
+              onClick={() => setView(v)}
+            >
+              {v === "grid" ? <GridIcon /> : <ListIcon />}
             </button>
           ))}
         </div>
@@ -68,6 +79,13 @@ export function ProjectsBrowser({ items, labels }: { items: Item[]; labels: Labe
                     {p.initials}
                   </span>
                 )}
+                <span className="card-overlay" aria-hidden="true">
+                  <span className="card-overlay-text">{p.text}</span>
+                  <span className="card-overlay-btn">
+                    {labels.details}
+                    <ServiceIcon name="arrowRight" size={16} />
+                  </span>
+                </span>
               </div>
               <div className="svc-meta">
                 <h2>{p.name}</h2>

@@ -325,7 +325,8 @@
       "label": "Görünüş",
       "grid": "Şəbəkə",
       "list": "Siyahı"
-    }
+    },
+    "details": "Ətraflı bax"
   },
   "projectsPage": {
     "metaTitle": "Layihələr",

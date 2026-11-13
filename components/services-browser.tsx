@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { ServiceIcon } from "@/components/service-icon";
+import { GridIcon, ListIcon } from "@/components/view-toggle-icons";
+import { Link } from "@/i18n/navigation";
 
 type Item = {
   id: string;
@@ -9,6 +11,7 @@ type Item = {
   title: string;
   subtitle: string;
   text: string;
+  topic: string;
 };
 
 type Labels = {
@@ -17,6 +20,7 @@ type Labels = {
   list: string;
   filterLabel: string;
   viewLabel: string;
+  details: string;
 };
 
 export function ServicesBrowser({
@@ -48,8 +52,16 @@ export function ServicesBrowser({
         </div>
         <div className="svc-toggle" role="group" aria-label={labels.viewLabel}>
           {(["grid", "list"] as const).map((v) => (
-            <button key={v} type="button" aria-pressed={view === v} onClick={() => setView(v)}>
-              {labels[v]}
+            <button
+              key={v}
+              type="button"
+              className="view-icon-btn"
+              aria-pressed={view === v}
+              aria-label={labels[v]}
+              title={labels[v]}
+              onClick={() => setView(v)}
+            >
+              {v === "grid" ? <GridIcon /> : <ListIcon />}
             </button>
           ))}
         </div>
@@ -57,10 +69,17 @@ export function ServicesBrowser({
       <ul className={"svc-browse view-" + view} aria-live="polite">
         {shown.map((s) => (
           <li key={s.id}>
-            <article className="svc-item">
-              <div className={"svc-visual tone-" + s.id} aria-hidden="true">
-                <span className="svc-mark">
+            <Link className="svc-item proj-link" href={`/contact?topic=${s.topic}`}>
+              <div className={"svc-visual tone-" + s.id}>
+                <span className="svc-mark" aria-hidden="true">
                   <ServiceIcon name={s.icon} size={44} />
+                </span>
+                <span className="card-overlay" aria-hidden="true">
+                  <span className="card-overlay-text">{s.text}</span>
+                  <span className="card-overlay-btn">
+                    {labels.details}
+                    <ServiceIcon name="arrowRight" size={16} />
+                  </span>
                 </span>
               </div>
               <div className="svc-meta">
@@ -68,7 +87,7 @@ export function ServicesBrowser({
                 <p className="svc-sub">{s.subtitle}</p>
                 {view === "list" ? <p className="svc-text">{s.text}</p> : null}
               </div>
-            </article>
+            </Link>
           </li>
         ))}
       </ul>
