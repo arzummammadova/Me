@@ -3338,3 +3338,31 @@ body:has(.floating-dock) .site-footer { padding-bottom: 100px; }
   .floating-dock { animation: none; }
 }
 /* END floating-dock */
+
+/* BEGIN dock-contrast */
+.floating-dock {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(16, 44, 76, 0.1);
+  box-shadow: 0 18px 40px -18px rgba(8, 40, 90, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.dock-links a {
+  color: rgba(16, 44, 76, 0.75);
+  text-shadow: none;
+}
+.dock-links a:hover {
+  color: var(--ink);
+  background: rgba(16, 44, 76, 0.06);
+}
+.dock-links a[aria-current="page"] {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 2px 8px rgba(8, 40, 90, 0.12);
+}
+.dock-back, .dock-cta {
+  color: var(--ink);
+  box-shadow: 0 2px 10px rgba(8, 40, 90, 0.14), 0 0 0 1px rgba(16, 44, 76, 0.08);
+}
+.dock-back:focus-visible, .dock-links a:focus-visible, .dock-cta:focus-visible { outline-color: var(--ink); }
+/* END dock-contrast */
