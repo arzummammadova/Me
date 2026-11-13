@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { SkyClouds } from "@/components/sky-clouds";
 import { ServiceIcon } from "@/components/service-icon";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -77,16 +78,19 @@ export default async function ProjectDetails({ params }: { params: Params }) {
   return (
     <>
       <main id="main" className="content-page projectsPage-page project-detail-page">
-        <div className="page-heading detail-heading">
-          <Link className="back-link" href="/projects">
-            <ServiceIcon name="arrowRight" size={18} />
-            {t("back")}
-          </Link>
-          <h1>{project.name}</h1>
-          {t.has(`roles.${project.id}`) ? (
-            <p className="page-intro">{t(`roles.${project.id}`)}</p>
-          ) : null}
-        </div>
+        <section className="page-hero">
+          <SkyClouds />
+            <div className="page-heading detail-heading">
+              <Link className="back-link" href="/projects">
+                <ServiceIcon name="arrowRight" size={18} />
+                {t("back")}
+              </Link>
+              <h1>{project.name}</h1>
+              {t.has(`roles.${project.id}`) ? (
+                <p className="page-intro">{t(`roles.${project.id}`)}</p>
+              ) : null}
+            </div>
+        </section>
 
         <div className="page-body detail-body">
           <figure className={"detail-hero" + (hero ? "" : " is-empty")}>

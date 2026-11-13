@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { articleIds } from "@/data/profile";
 import { PortfolioStory } from "@/components/portfolio-story";
+import { SkyClouds } from "@/components/sky-clouds";
 export default async function Article({
   params,
 }: {
@@ -14,16 +15,21 @@ export default async function Article({
   const t = await getTranslations("blog");
   return (
     <main id="main" className="content-page article-page">
-      <Link className="text-link" href="/blog">
-        ← {t("back")}
-      </Link>
-      <div className="page-body">
-      <article>
-        <p className="eyebrow">
+      <section className="page-hero">
+        <SkyClouds />
+        <div className="page-heading">
+          <Link className="text-link" href="/blog">
+            ← {t("back")}
+          </Link>
+          <p className="eyebrow">
           {t(`${slug}.category`)} · {t(slug === "portfolio" ? "portfolio.readTime" : "readTime")}
         </p>
-        <h1>{t(`${slug}.title`)}</h1>
-        <p className="article-lead">{t(`${slug}.excerpt`)}</p>
+          <h1>{t(`${slug}.title`)}</h1>
+          <p className="article-lead">{t(`${slug}.excerpt`)}</p>
+        </div>
+      </section>
+      <div className="page-body">
+      <article>
         {slug === "portfolio" ? <PortfolioStory /> : [1, 2, 3].map((n) => (
           <section key={n}>
             <h2>{t(`${slug}.heading${n}`)}</h2>
