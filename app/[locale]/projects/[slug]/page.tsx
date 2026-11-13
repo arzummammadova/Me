@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { LoadingImage } from "@/components/loading-image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -89,7 +90,7 @@ export default async function ProjectDetails({ params }: { params: Params }) {
         <div className="page-body detail-body">
           {hero ? (
             <figure className="detail-hero">
-              <LoadingImage src={hero} alt={alt(hero)} fill priority sizes="(max-width: 900px) 92vw, 1300px" />
+              <Image src={hero} alt={alt(hero)} fill priority sizes="(max-width: 900px) 92vw, 1300px" />
             </figure>
           ) : null}
 

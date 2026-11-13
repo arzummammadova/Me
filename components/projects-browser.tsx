@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { LoadingImage } from "@/components/loading-image";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ServiceIcon } from "@/components/service-icon";
 import { GridIcon, ListIcon } from "@/components/view-toggle-icons";
@@ -71,7 +71,7 @@ export function ProjectsBrowser({ items, labels }: { items: Item[]; labels: Labe
                 className={"svc-visual" + (p.image ? " has-image" : " tone-p" + (p.name.length % 6))}
               >
                 {p.image ? (
-                  <LoadingImage
+                  <Image
                     src={p.image}
                     alt={p.alt}
                     fill
