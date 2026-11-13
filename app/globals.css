@@ -3726,3 +3726,55 @@ main.project-detail-page > .page-body { padding-top: 0; padding-bottom: 0; }
   }
 }
 /* END header-liquid */
+
+/* BEGIN cloud-bank */
+/* Hero fades into white and descends through a bank of clouds. */
+.page-hero {
+  overflow-x: clip;
+  overflow-y: visible;
+  background: linear-gradient(180deg, #083b71 0%, #1f5c9f 40%, #5f9bcf 68%, #b9d7ef 86%, #ffffff 100%);
+  padding-bottom: clamp(120px, 11vw, 180px);
+}
+.page-hero .sky-clouds { overflow: hidden; }
+.page-hero .sky-cloud-6 { bottom: 18%; }
+.cloud-bank {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0;
+  height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.bank-cloud {
+  position: absolute;
+  bottom: 0;
+  left: var(--x);
+  width: var(--w);
+  aspect-ratio: 1200 / 676;
+  background: url("/assets/cloud.png") center / contain no-repeat;
+  background-image: image-set(url("/assets/cloud.webp") type("image/webp"), url("/assets/cloud.png") type("image/png"));
+  filter: brightness(1.1) saturate(.6);
+  opacity: var(--o, 1);
+  transform: translateY(var(--drop-px, 0));
+}
+.bank-cloud-1 { --x: -7%; --w: 26vw; --o: .95; --drop-px: 34%; }
+.bank-cloud-2 { --x: 10%; --w: 20vw; --o: .7;  --drop-px: 18%; }
+.bank-cloud-3 { --x: 22%; --w: 28vw; --o: 1;   --drop-px: 40%; }
+.bank-cloud-4 { --x: 39%; --w: 18vw; --o: .65; --drop-px: 14%; }
+.bank-cloud-5 { --x: 48%; --w: 27vw; --o: .95; --drop-px: 38%; }
+.bank-cloud-6 { --x: 64%; --w: 19vw; --o: .7;  --drop-px: 20%; }
+.bank-cloud-7 { --x: 72%; --w: 26vw; --o: 1;   --drop-px: 42%; }
+.bank-cloud-8 { --x: 86%; --w: 22vw; --o: .8;  --drop-px: 26%; }
+.bank-cloud-9 { --x: 30%; --w: 14vw; --o: .5;  --drop-px: 4%; }
+main.content-page > .page-body { margin-top: clamp(56px, 6vw, 96px); }
+@media (max-width: 768px) {
+  .page-hero { padding-bottom: 96px; }
+  .bank-cloud-2, .bank-cloud-4, .bank-cloud-6, .bank-cloud-9 { display: none; }
+  .bank-cloud-1 { --x: -14%; --w: 46vw; }
+  .bank-cloud-3 { --x: 14%; --w: 44vw; }
+  .bank-cloud-5 { --x: 40%; --w: 42vw; }
+  .bank-cloud-7 { --x: 62%; --w: 44vw; }
+  .bank-cloud-8 { --x: 82%; --w: 34vw; }
+  main.content-page > .page-body { margin-top: 56px; }
+}
+/* END cloud-bank */
