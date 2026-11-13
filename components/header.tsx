@@ -91,7 +91,9 @@ export function Header() {
         )}
         <nav aria-label={t("navigation")} className="header-nav" id="site-nav">
           {navLinks
-            .filter((link) => home || !dockLinks.some((d) => d.href === link.href))
+            .filter((link) =>
+              home ? link.href !== "/projects" : !dockLinks.some((d) => d.href === link.href),
+            )
             .map((link) => (
             <Link
               key={link.href}

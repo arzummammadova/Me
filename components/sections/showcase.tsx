@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { Asset } from "@/components/asset";
 import { projects } from "@/data/profile";
 import { ServiceIcon } from "@/components/service-icon";
+import { Link } from "@/i18n/navigation";
 
 export function Showcase({
   index,
@@ -18,6 +19,7 @@ export function Showcase({
   const timeline = useRef<gsap.core.Timeline | null>(null);
   const first = useRef(true);
   const project = projects[index];
+  const isLast = index === projects.length - 1;
   useLayoutEffect(() => {
     if (first.current) {
       first.current = false;
@@ -85,10 +87,17 @@ export function Showcase({
           </div>
         </div>
         <div className="showcase-controls">
-          <button className="pill-button next-pill" onClick={onNext}>
-            {t("next")}
-            <ServiceIcon name="arrowRight" size={18} />
-          </button>
+          {isLast ? (
+            <Link className="pill-button next-pill" href="/projects">
+              {t("viewAll")}
+              <ServiceIcon name="arrowRight" size={18} />
+            </Link>
+          ) : (
+            <button type="button" className="pill-button next-pill" onClick={onNext}>
+              {t("next")}
+              <ServiceIcon name="arrowRight" size={18} />
+            </button>
+          )}
         </div>
       </div>
     </section>

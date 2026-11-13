@@ -56,7 +56,8 @@
     "previous": "Previous",
     "next": "Next",
     "restart": "Restart",
-    "visit": "View project"
+    "visit": "View project",
+    "viewAll": "View all"
   },
   "why": {
     "title": "Thoughtful details. Working products.",
