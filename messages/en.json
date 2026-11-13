@@ -233,47 +233,58 @@
     "items": {
       "web": {
         "title": "Next.js & React web apps",
-        "text": "Scalable web applications with component-based architecture, API integration, authentication and state management."
+        "text": "Scalable web applications with component-based architecture, API integration, authentication and state management.",
+        "sub": "Development · Next.js"
       },
       "figma": {
         "title": "Pixel-perfect UI from Figma",
-        "text": "I turn Figma designs into clean, responsive code that looks right on everything from phones to wide monitors."
+        "text": "I turn Figma designs into clean, responsive code that looks right on everything from phones to wide monitors.",
+        "sub": "Development · Figma to code"
       },
       "landing": {
         "title": "Animated landing & portfolio sites",
-        "text": "Memorable presentation pages with GSAP and scroll animations that still load fast. This portfolio is built that way."
+        "text": "Memorable presentation pages with GSAP and scroll animations that still load fast. This portfolio is built that way.",
+        "sub": "Design · GSAP motion"
       },
       "dashboard": {
         "title": "Admin panels & dashboards",
-        "text": "Panels with tables, filters, forms and stats blocks that make data easy to manage — like in INGRI and VRIBBE."
+        "text": "Panels with tables, filters, forms and stats blocks that make data easy to manage — like in INGRI and VRIBBE.",
+        "sub": "Development · React"
       },
       "performance": {
         "title": "Web performance optimization",
-        "text": "Improving Core Web Vitals: responsive images with srcset and sizes, lazy loading, fetchpriority and less unused JavaScript."
+        "text": "Improving Core Web Vitals: responsive images with srcset and sizes, lazy loading, fetchpriority and less unused JavaScript.",
+        "sub": "Performance · Core Web Vitals"
       },
       "a11y": {
         "title": "Accessibility (a11y) fixes",
-        "text": "Keyboard navigation, visible focus, semantic HTML, proper contrast and ARIA attributes for an interface that works for everyone."
+        "text": "Keyboard navigation, visible focus, semantic HTML, proper contrast and ARIA attributes for an interface that works for everyone.",
+        "sub": "Performance · Accessibility"
       },
       "i18n": {
         "title": "Multilingual (i18n) sites",
-        "text": "Localized routes, date formats and a smooth language switch in Azerbaijani, English and Russian with next-intl."
+        "text": "Localized routes, date formats and a smooth language switch in Azerbaijani, English and Russian with next-intl.",
+        "sub": "Development · next-intl"
       },
       "pwa": {
         "title": "PWA & offline mode",
-        "text": "Caching with Service Workers, pages that open without a connection, and websites that can be installed like an app."
+        "text": "Caching with Service Workers, pages that open without a connection, and websites that can be installed like an app.",
+        "sub": "Development · PWA"
       },
       "uiux": {
         "title": "UI/UX design in Figma",
-        "text": "From user flows, wireframes and prototypes to a ready design system — clear, modern interfaces designed in Figma."
+        "text": "From user flows, wireframes and prototypes to a ready design system — clear, modern interfaces designed in Figma.",
+        "sub": "Design · Figma"
       },
       "aivideo": {
         "title": "AI video generation",
-        "text": "Promo and reels videos for your brand made with AI: script, visuals and voice-over in one place."
+        "text": "Promo and reels videos for your brand made with AI: script, visuals and voice-over in one place.",
+        "sub": "Design · AI video"
       },
       "seo": {
         "title": "SEO optimization",
-        "text": "Technical SEO, metadata and Open Graph, sitemaps, semantic structure and Core Web Vitals so your site shows up better in search."
+        "text": "Technical SEO, metadata and Open Graph, sitemaps, semantic structure and Core Web Vitals so your site shows up better in search.",
+        "sub": "Performance · SEO"
       }
     },
     "processTitle": "How we work together",
@@ -302,6 +313,18 @@
       "dev": "Development",
       "design": "Design & creative",
       "growth": "Performance & SEO"
+    },
+    "filters": {
+      "label": "Category",
+      "all": "All",
+      "dev": "Development",
+      "design": "Design",
+      "growth": "SEO & performance"
+    },
+    "view": {
+      "label": "View",
+      "grid": "Grid",
+      "list": "List"
     }
   },
   "projectsPage": {

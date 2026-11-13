@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { ServiceIcon } from "@/components/service-icon";
 import { NeedPicker } from "@/components/need-picker";
+import { ServicesBrowser } from "@/components/services-browser";
 import { Link } from "@/i18n/navigation";
 import { services, serviceGroups, processSteps } from "@/data/site";
 
@@ -27,42 +28,32 @@ export default async function Services({
   return (
     <PageShell section="services">
       <section className="services-section" aria-labelledby="services-list-title">
-        <div className="section-head">
-          <h2 id="services-list-title">{t("listTitle")}</h2>
-        </div>
-        {serviceGroups.map((group) => (
-          <div key={group} className="service-group">
-            <h3 className="group-title">{t(`groups.${group}`)}</h3>
-            <ul className="service-grid">
-              {services
-                .filter((s) => s.group === group)
-                .map((s) => {
-                  const n = services.indexOf(s) + 1;
-                  return (
-                    <li
-                      key={s.id}
-                      className="service-card reveal"
-                      style={{ "--i": n % 8 } as React.CSSProperties}
-                    >
-                      <div className="service-card-top">
-                        <span className="service-icon">
-                          <ServiceIcon name={s.icon} />
-                        </span>
-                        <span className="service-index">{String(n).padStart(2, "0")}</span>
-                      </div>
-                      <h4>{t(`items.${s.id}.title`)}</h4>
-                      <p>{t(`items.${s.id}.text`)}</p>
-                      <ul className="tag-row" aria-label={t("tagsLabel")}>
-                        {s.tags.map((tag) => (
-                          <li key={tag}>{tag}</li>
-                        ))}
-                      </ul>
-                    </li>
-                  );
-                })}
-            </ul>
-          </div>
-        ))}
+        <h2 id="services-list-title" className="sr-only">
+          {t("listTitle")}
+        </h2>
+        <ServicesBrowser
+          groups={serviceGroups}
+          items={services.map((s) => ({
+            id: s.id,
+            group: s.group,
+            icon: s.icon,
+            title: t(`items.${s.id}.title`),
+            subtitle: t(`items.${s.id}.sub`),
+            text: t(`items.${s.id}.text`),
+          }))}
+          labels={{
+            filters: {
+              all: t("filters.all"),
+              dev: t("filters.dev"),
+              design: t("filters.design"),
+              growth: t("filters.growth"),
+            },
+            grid: t("view.grid"),
+            list: t("view.list"),
+            filterLabel: t("filters.label"),
+            viewLabel: t("view.label"),
+          }}
+        />
       </section>
 
       <section className="process-section" aria-labelledby="process-title">

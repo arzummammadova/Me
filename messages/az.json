@@ -233,47 +233,58 @@
     "items": {
       "web": {
         "title": "Next.js və React veb tətbiqləri",
-        "text": "Komponent əsaslı arxitektura, API inteqrasiyası, autentifikasiya və state idarəetməsi ilə böyüməyə hazır veb tətbiqlər."
+        "text": "Komponent əsaslı arxitektura, API inteqrasiyası, autentifikasiya və state idarəetməsi ilə böyüməyə hazır veb tətbiqlər.",
+        "sub": "Proqramlaşdırma · Next.js"
       },
       "figma": {
         "title": "Figma-dan piksel dəqiqliyində UI",
-        "text": "Figma maketlərini telefondan geniş monitora qədər eyni görünən, responsiv və səliqəli koda çevirirəm."
+        "text": "Figma maketlərini telefondan geniş monitora qədər eyni görünən, responsiv və səliqəli koda çevirirəm.",
+        "sub": "Proqramlaşdırma · Figma → kod"
       },
       "landing": {
         "title": "Animasiyalı landing və portfolio saytları",
-        "text": "GSAP və scroll animasiyaları ilə yadda qalan, amma sürətli açılan təqdimat səhifələri. Bu portfolio da belə qurulub."
+        "text": "GSAP və scroll animasiyaları ilə yadda qalan, amma sürətli açılan təqdimat səhifələri. Bu portfolio da belə qurulub.",
+        "sub": "Dizayn · GSAP animasiya"
       },
       "dashboard": {
         "title": "Admin panellər və dashboard-lar",
-        "text": "Cədvəllər, filtrlər, formalar və statistika blokları ilə məlumatı rahat idarə etməyə imkan verən panellər — INGRI və VRIBBE-də olduğu kimi."
+        "text": "Cədvəllər, filtrlər, formalar və statistika blokları ilə məlumatı rahat idarə etməyə imkan verən panellər — INGRI və VRIBBE-də olduğu kimi.",
+        "sub": "Proqramlaşdırma · React"
       },
       "performance": {
         "title": "Veb performans optimizasiyası",
-        "text": "Core Web Vitals göstəricilərini yaxşılaşdırıram: srcset və sizes ilə şəkillər, lazy loading, fetchpriority və artıq JavaScript-in azaldılması."
+        "text": "Core Web Vitals göstəricilərini yaxşılaşdırıram: srcset və sizes ilə şəkillər, lazy loading, fetchpriority və artıq JavaScript-in azaldılması.",
+        "sub": "Performans · Core Web Vitals"
       },
       "a11y": {
         "title": "Əlçatanlıq (a11y) düzəlişləri",
-        "text": "Klaviatura ilə naviqasiya, görünən fokus, semantik HTML, düzgün kontrast və ARIA atributları ilə hər kəs üçün rahat interfeys."
+        "text": "Klaviatura ilə naviqasiya, görünən fokus, semantik HTML, düzgün kontrast və ARIA atributları ilə hər kəs üçün rahat interfeys.",
+        "sub": "Performans · Əlçatanlıq"
       },
       "i18n": {
         "title": "Çoxdilli (i18n) saytlar",
-        "text": "next-intl ilə Azərbaycan, ingilis və rus dillərində lokallaşdırılmış marşrutlar, tarix formatları və rahat dil keçidi."
+        "text": "next-intl ilə Azərbaycan, ingilis və rus dillərində lokallaşdırılmış marşrutlar, tarix formatları və rahat dil keçidi.",
+        "sub": "Proqramlaşdırma · next-intl"
       },
       "pwa": {
         "title": "PWA və oflayn rejim",
-        "text": "Service Worker ilə keşləmə, internet olmadan da açılan səhifələr və tətbiq kimi quraşdırıla bilən veb saytlar."
+        "text": "Service Worker ilə keşləmə, internet olmadan da açılan səhifələr və tətbiq kimi quraşdırıla bilən veb saytlar.",
+        "sub": "Proqramlaşdırma · PWA"
       },
       "uiux": {
         "title": "Figma-da UI/UX dizayn",
-        "text": "İstifadəçi axınları, wireframe və prototiplərdən hazır dizayn sisteminə qədər — Figma-da aydın və müasir interfeyslər hazırlayıram."
+        "text": "İstifadəçi axınları, wireframe və prototiplərdən hazır dizayn sisteminə qədər — Figma-da aydın və müasir interfeyslər hazırlayıram.",
+        "sub": "Dizayn · Figma"
       },
       "aivideo": {
         "title": "AI ilə video hazırlanması",
-        "text": "Brendiniz üçün süni intellektlə promo və reels videoları: ssenari, vizual və səsləndirmə bir yerdə."
+        "text": "Brendiniz üçün süni intellektlə promo və reels videoları: ssenari, vizual və səsləndirmə bir yerdə.",
+        "sub": "Dizayn · AI video"
       },
       "seo": {
         "title": "SEO optimizasiyası",
-        "text": "Texniki SEO, metadata və Open Graph, sitemap, semantik struktur və Core Web Vitals ilə saytınız axtarışda daha yaxşı görünür."
+        "text": "Texniki SEO, metadata və Open Graph, sitemap, semantik struktur və Core Web Vitals ilə saytınız axtarışda daha yaxşı görünür.",
+        "sub": "Performans · SEO"
       }
     },
     "processTitle": "Birlikdə necə işləyirik",
@@ -302,6 +313,18 @@
       "dev": "Proqramlaşdırma",
       "design": "Dizayn və kreativ",
       "growth": "Performans və SEO"
+    },
+    "filters": {
+      "label": "Kateqoriya",
+      "all": "Hamısı",
+      "dev": "Proqramlaşdırma",
+      "design": "Dizayn",
+      "growth": "SEO və performans"
+    },
+    "view": {
+      "label": "Görünüş",
+      "grid": "Şəbəkə",
+      "list": "Siyahı"
     }
   },
   "projectsPage": {
