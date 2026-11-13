@@ -372,6 +372,36 @@
     "noMedia": "Visuals for this project haven't been shared yet. Get in touch for more details.",
     "extra": {
       "ingri": "English lessons for Azerbaijani speakers: the interface works in Azerbaijani and English, and lesson texts come with Azerbaijani translations. The platform includes grammar, word flashcards, podcasts, listening and speaking practice, videos, films, books, a leaderboard and light and dark modes."
+    },
+    "subs": {
+      "ingri": "Language learning platform · Next.js",
+      "vribbe": "AI commerce platform · Next.js",
+      "readly": "Book review platform · Full-stack",
+      "aionTimer": "Time management app · Three.js",
+      "toast": "npm library · TypeScript",
+      "hubfolio": "Portfolio website · Vanilla JS",
+      "aionAnalyze": "PDF analysis tool · Next.js",
+      "voice": "Voice control demo · Web Speech API",
+      "metraj": "Real estate website · Frontend",
+      "goldHospital": "Appointment booking · Next.js",
+      "glabbe": "Appointment management · Full-stack",
+      "loyalty": "Loyalty system · PWA & React Native",
+      "boulvard": "Clinic management system · Next.js",
+      "foodlens": "AI food safety app · React Native",
+      "evisa": "Online e-visa platform",
+      "clomni": "Website rebranding · Team project",
+      "alfinx": "Front-end internship · AI automation",
+      "walkstep": "Landing page"
+    },
+    "sort": {
+      "label": "Sort",
+      "newest": "Newest",
+      "oldest": "Oldest"
+    },
+    "view": {
+      "label": "View",
+      "grid": "Grid",
+      "list": "List"
     }
   },
   "about": {

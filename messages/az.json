@@ -372,6 +372,36 @@
     "noMedia": "Bu layihə üçün vizual material hələ paylaşılmayıb. Ətraflı məlumat üçün mənimlə əlaqə saxlayın.",
     "extra": {
       "ingri": "Azərbaycanca danışanlar üçün ingilis dili dərsləri: interfeys azərbaycan və ingilis dillərində, dərs mətnləri isə azərbaycanca tərcümələrlə. Platformada qrammatika, söz kartları (flashcards), podkastlar, dinləmə və danışıq məşqləri, videolar, filmlər, kitablar, liderlər cədvəli, açıq və qaranlıq rejim var."
+    },
+    "subs": {
+      "ingri": "Dil öyrənmə platforması · Next.js",
+      "vribbe": "AI ticarət platforması · Next.js",
+      "readly": "Kitab rəyləri platforması · Full-stack",
+      "aionTimer": "Vaxt idarəetmə tətbiqi · Three.js",
+      "toast": "npm kitabxanası · TypeScript",
+      "hubfolio": "Portfolio saytı · Vanilla JS",
+      "aionAnalyze": "PDF təhlil aləti · Next.js",
+      "voice": "Səslə idarəetmə demosu · Web Speech API",
+      "metraj": "Daşınmaz əmlak saytı · Frontend",
+      "goldHospital": "Onlayn qəbula yazılma · Next.js",
+      "glabbe": "Görüşlərin idarəsi · Full-stack",
+      "loyalty": "Sadiqlik sistemi · PWA və React Native",
+      "boulvard": "Klinika idarəetmə sistemi · Next.js",
+      "foodlens": "AI qida təhlükəsizliyi tətbiqi · React Native",
+      "evisa": "Onlayn e-viza platforması",
+      "clomni": "Saytın rebrendinqi · Komanda layihəsi",
+      "alfinx": "Front-end təcrübə · AI avtomatlaşdırma",
+      "walkstep": "Landing səhifə"
+    },
+    "sort": {
+      "label": "Sıralama",
+      "newest": "Ən yeni",
+      "oldest": "Ən köhnə"
+    },
+    "view": {
+      "label": "Görünüş",
+      "grid": "Şəbəkə",
+      "list": "Siyahı"
     }
   },
   "about": {

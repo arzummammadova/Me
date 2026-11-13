@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { ServiceIcon } from "@/components/service-icon";
 import { NeedPicker } from "@/components/need-picker";
+import { ProjectsBrowser } from "@/components/projects-browser";
 import { Link } from "@/i18n/navigation";
 import { portfolioProjects, projectSlug } from "@/data/site";
 
@@ -41,49 +41,25 @@ export default async function Projects({
   return (
     <>
       <PageShell section="projectsPage">
-        <ul className="project-grid unified">
-          {portfolioProjects.map((p, i) => (
-            <li
-              key={p.id}
-              className={"project-card reveal" + (p.featured ? " is-featured" : "")}
-              style={{ "--i": i % 8 } as React.CSSProperties}
-            >
-              <Link className="project-card-link" href={`/projects/${projectSlug(p.id)}`}>
-                <div className={"project-media" + (p.image ? "" : " project-media-empty")}>
-                  {p.image ? (
-                    <Image
-                      src={p.image}
-                      alt={t("imageAlt", { name: p.name })}
-                      fill
-                      sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 30vw"
-                    />
-                  ) : (
-                    <span className="project-monogram" aria-hidden="true">
-                      {projectInitials(p.name)}
-                    </span>
-                  )}
-                </div>
-                <div className="project-body">
-                  {t.has(`roles.${p.id}`) ? <p className="eyebrow">{t(`roles.${p.id}`)}</p> : null}
-                  <h2>{p.name}</h2>
-                  <p>{description(p.id)}</p>
-                  {p.tech.length ? (
-                    <ul className="tag-row">
-                      {p.tech.slice(0, 5).map((tag) => (
-                        <li key={tag}>{tag}</li>
-                      ))}
-                      {p.tech.length > 5 ? <li>+{p.tech.length - 5}</li> : null}
-                    </ul>
-                  ) : null}
-                  <span className="project-more">
-                    {t("details")}
-                    <ServiceIcon name="arrowRight" size={18} />
-                  </span>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <ProjectsBrowser
+          items={portfolioProjects.map((p) => ({
+            slug: projectSlug(p.id),
+            name: p.name,
+            image: p.image,
+            alt: t("imageAlt", { name: p.name }),
+            subtitle: t(`subs.${p.id}`),
+            text: description(p.id),
+            initials: projectInitials(p.name),
+          }))}
+          labels={{
+            newest: t("sort.newest"),
+            oldest: t("sort.oldest"),
+            grid: t("view.grid"),
+            list: t("view.list"),
+            sortLabel: t("sort.label"),
+            viewLabel: t("view.label"),
+          }}
+        />
 
         <section className="cta-panel reveal" aria-labelledby="projects-cta">
           <div>

@@ -3503,3 +3503,26 @@ body:not(:has(.content-page)) .sky-clouds { display: none; }
   .svc-meta h3 { font-size: 20px; }
 }
 /* END services-editorial */
+
+/* BEGIN projects-editorial */
+.projectsPage-page.content-page:not(.project-detail-page) { max-width: 1480px; padding-left: clamp(16px, 3vw, 40px); padding-right: clamp(16px, 3vw, 40px); }
+.projectsPage-page:not(.project-detail-page) .page-body { padding: clamp(24px, 3vw, 40px); background: #fbfcfd; }
+.proj-link { display: block; color: inherit; text-decoration: none; }
+.proj-link:focus-visible { outline: 2px solid #2f5bd3; outline-offset: 4px; }
+.proj-browse .svc-meta h2 { margin: 18px 0 4px; font-size: 22px; font-weight: 400; color: #111827; letter-spacing: -0.01em; }
+.proj-browse.view-list .svc-meta h2 { margin-top: 0; }
+.svc-visual.has-image { background: #eef3f8; }
+.svc-visual.has-image::before, .svc-visual.has-image::after { display: none; }
+.svc-visual.has-image img { object-fit: cover; object-position: top center; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.proj-link:hover .svc-visual.has-image img { transform: scale(1.04); }
+.proj-link:hover .svc-visual { transform: none; }
+.proj-mark { font-family: var(--font-inter), Arial, Helvetica, sans-serif; font-size: clamp(26px, 2.6vw, 38px); font-weight: 700; letter-spacing: .02em; }
+.proj-browse.view-list .proj-mark { font-size: 16px; }
+.proj-browse .svc-text { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.tone-p0 { background: linear-gradient(140deg, #0b1f4b 0%, #1d4fd8 60%, #5aa2ff 100%); }
+.tone-p1 { background: linear-gradient(140deg, #1e0b4b 0%, #7c3aed 50%, #ec4899 100%); }
+.tone-p2 { background: linear-gradient(140deg, #064e3b 0%, #16a34a 50%, #a3e635 100%); }
+.tone-p3 { background: linear-gradient(140deg, #ff3d7f 0%, #ff7a45 55%, #ffc24b 100%); }
+.tone-p4 { background: linear-gradient(140deg, #064e57 0%, #0e9f9a 60%, #7ae7c7 100%); }
+.tone-p5 { background: linear-gradient(140deg, #312e81 0%, #5a3fd6 55%, #9b8cff 100%); }
+/* END projects-editorial */
