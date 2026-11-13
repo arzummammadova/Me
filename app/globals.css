@@ -3674,3 +3674,55 @@ main.project-detail-page > .page-body { padding-top: 0; padding-bottom: 0; }
   .site-header #site-nav .header-block::after { content: none; }
 }
 /* END header-glass */
+
+/* BEGIN header-liquid */
+@media (min-width: 1101px) {
+  .site-header #site-nav {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .26) 0%, rgba(255, 255, 255, .1) 45%, rgba(255, 255, 255, .2) 100%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.08);
+    backdrop-filter: blur(22px) saturate(180%) brightness(1.08);
+    border: 1px solid rgba(255, 255, 255, .42);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, .7),
+      inset 0 -1px 0 rgba(255, 255, 255, .14),
+      inset 0 0 18px rgba(255, 255, 255, .12),
+      0 14px 34px -16px rgba(0, 12, 40, .55);
+  }
+  .site-header #site-nav::before {
+    content: "";
+    position: absolute;
+    inset: 1px 1px 50% 1px;
+    border-radius: 999px 999px 40% 40% / 999px 999px 100% 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));
+    pointer-events: none;
+    z-index: -1;
+  }
+  /* dark navy header on subpages: white links */
+  .page-header #site-nav .header-block {
+    color: rgba(255, 255, 255, .85);
+    text-shadow: 0 1px 2px rgba(0, 12, 40, .3);
+  }
+  .page-header #site-nav .header-block:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .16);
+  }
+  /* light sky behind the home header: navy links */
+  .home-header #site-nav { border-color: rgba(255, 255, 255, .6); }
+  .home-header #site-nav .header-block {
+    color: rgba(16, 44, 76, .85);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+  }
+  .home-header #site-nav .header-block:hover {
+    color: var(--ink);
+    background: rgba(255, 255, 255, .3);
+  }
+  .site-header #site-nav .header-block[aria-current="page"] {
+    background: #fff;
+    color: var(--ink);
+    text-shadow: none;
+    box-shadow: 0 2px 8px rgba(0, 12, 40, .18);
+  }
+}
+/* END header-liquid */
