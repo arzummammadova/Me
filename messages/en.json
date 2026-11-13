@@ -362,14 +362,15 @@
       "metraj": "A real-estate website for exploring apartment listings and reviewing buying and selling opportunities.",
       "goldHospital": "A hospital appointment booking website.",
       "glabbe": "A full-stack appointment management platform for professionals.",
+      "containerAcademy": "An education platform presenting practical IT courses, mentor support and career opportunities.",
       "loyalty": "A loyalty system: a React-based PWA plus a React Native mobile app.",
       "boulvard": "A clinic management system with a responsive interface.",
       "foodlens": "An AI-powered risk analysis app for food safety.",
       "evisa": "An online electronic visa application platform for travelers.",
       "clomni": "I was part of the team behind the Clomni website rebranding.",
       "alfinx": "Front-end internship at AlfinX, a company building AI-based solutions for business automation.",
-      "walkstep": "A landing page for WalkStep."
-      ,"deskPi": "An AI-powered desktop assistant designed to speed up everyday tasks and help users directly from their desktop."
+      "walkstep": "A landing page for WalkStep.",
+      "deskPi": "An AI-powered desktop assistant designed to speed up everyday tasks and help users directly from their desktop."
     },
     "ctaTitle": "Your project could be next.",
     "ctaText": "Tell me about your idea and let's turn it into a working product.",
@@ -396,14 +397,15 @@
       "metraj": "Real estate website",
       "goldHospital": "Appointment booking",
       "glabbe": "Appointment management",
+      "containerAcademy": "IT course platform",
       "loyalty": "Loyalty system",
       "boulvard": "Clinic management system",
       "foodlens": "AI food safety app",
       "evisa": "Online e-visa platform",
       "clomni": "Website rebranding",
       "alfinx": "Front-end internship",
-      "walkstep": "Landing page"
-      ,"deskPi": "AI desktop assistant"
+      "walkstep": "Landing page",
+      "deskPi": "AI desktop assistant"
     },
     "sort": {
       "label": "Sort",

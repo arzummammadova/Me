@@ -20,7 +20,7 @@ export function Asset({
         fill
         sizes={sizes}
         priority={priority}
-        unoptimized={name === "developer-card.png" || name === "macbook.png" || name.startsWith("laptop-") || name.endsWith("-screen.png")}
+        unoptimized={name.endsWith(".svg") || name === "macbook.png" || name.startsWith("laptop-") || name.endsWith("-screen.png")}
         draggable={false}
       />
     </div>

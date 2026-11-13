@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { ServiceIcon } from "@/components/service-icon";
 import { GridIcon, ListIcon } from "@/components/view-toggle-icons";
 import { PhotoPlaceholder } from "@/components/photo-placeholder";
+import { motion } from "motion/react";
 
 type Item = {
   slug: string;
@@ -59,7 +60,13 @@ export function ProjectsBrowser({ items, labels }: { items: Item[]; labels: Labe
       <ul className={"svc-browse proj-browse view-" + view}>
         {shown.map((p) => (
           <li key={p.slug}>
-            <Link className="svc-item proj-link" href={`/projects/${p.slug}`}>
+            <motion.div
+              layout
+              initial={{ opacity: 0, y: 22, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Link className="svc-item proj-link" href={`/projects/${p.slug}`}>
               <div
                 className={"svc-visual" + (p.image ? " has-image" : " tone-p" + (p.name.length % 6))}
               >
@@ -90,7 +97,8 @@ export function ProjectsBrowser({ items, labels }: { items: Item[]; labels: Labe
                 <p className="svc-sub">{p.subtitle}</p>
                 {view === "list" ? <p className="svc-text">{p.text}</p> : null}
               </div>
-            </Link>
+              </Link>
+            </motion.div>
           </li>
         ))}
       </ul>

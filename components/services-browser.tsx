@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ServiceIcon } from "@/components/service-icon";
 import { GridIcon, ListIcon } from "@/components/view-toggle-icons";
 import { Link } from "@/i18n/navigation";
+import { motion } from "motion/react";
 
 type Item = {
   id: string;
@@ -69,7 +70,13 @@ export function ServicesBrowser({
       <ul className={"svc-browse view-" + view} aria-live="polite">
         {shown.map((s) => (
           <li key={s.id}>
-            <Link className="svc-item proj-link" href={`/contact?topic=${s.topic}`}>
+            <motion.div
+              layout
+              initial={{ opacity: 0, y: 22, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Link className="svc-item proj-link" href={`/contact?topic=${s.topic}`}>
               <div className={"svc-visual tone-" + s.id}>
                 <span className="svc-mark" aria-hidden="true">
                   <ServiceIcon name={s.icon} size={44} />
@@ -87,7 +94,8 @@ export function ServicesBrowser({
                 <p className="svc-sub">{s.subtitle}</p>
                 {view === "list" ? <p className="svc-text">{s.text}</p> : null}
               </div>
-            </Link>
+              </Link>
+            </motion.div>
           </li>
         ))}
       </ul>

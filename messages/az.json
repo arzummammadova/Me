@@ -362,14 +362,15 @@
       "metraj": "Mənzil elanlarını araşdırmaq və alqı-satqı imkanlarını rahat nəzərdən keçirmək üçün daşınmaz əmlak saytı.",
       "goldHospital": "Xəstəxana üçün onlayn qəbula yazılma saytı.",
       "glabbe": "Mütəxəssislər üçün görüşlərin idarə olunması üzrə full-stack platforma.",
+      "containerAcademy": "İT sahəsində praktiki kursları, mentor dəstəyini və karyera imkanlarını təqdim edən təhsil platforması.",
       "loyalty": "Sadiqlik (loyalty) sistemi: React əsaslı PWA və React Native ilə mobil tətbiq.",
       "boulvard": "Responsiv interfeysli klinika idarəetmə sistemi.",
       "foodlens": "Qida təhlükəsizliyi üçün süni intellektlə risk analizi aparan mobil tətbiq.",
       "evisa": "Səyahətçilər üçün onlayn elektron viza müraciəti platforması.",
       "clomni": "Clomni saytının rebrendinqi üzərində işləyən komandanın üzvü olmuşam.",
       "alfinx": "Biznes avtomatlaşdırması üçün süni intellekt əsaslı həllər hazırlayan AlfinX şirkətində front-end təcrübəsi.",
-      "walkstep": "WalkStep üçün landing səhifəsi."
-      ,"deskPi": "Gündəlik tapşırıqları sürətləndirmək və istifadəçiyə masaüstündə kömək etmək üçün AI əsaslı desktop köməkçisi."
+      "walkstep": "WalkStep üçün landing səhifəsi.",
+      "deskPi": "Gündəlik tapşırıqları sürətləndirmək və istifadəçiyə masaüstündə kömək etmək üçün AI əsaslı desktop köməkçisi."
     },
     "ctaTitle": "Növbəti layihə sizinki ola bilər.",
     "ctaText": "İdeyanızı danışın, onu birlikdə işlək məhsula çevirək.",
@@ -396,14 +397,15 @@
       "metraj": "Daşınmaz əmlak saytı",
       "goldHospital": "Onlayn qəbula yazılma",
       "glabbe": "Görüşlərin idarəsi",
+      "containerAcademy": "İT kurs platforması",
       "loyalty": "Sadiqlik sistemi",
       "boulvard": "Klinika idarəetmə sistemi",
       "foodlens": "AI qida təhlükəsizliyi tətbiqi",
       "evisa": "Onlayn e-viza platforması",
       "clomni": "Saytın rebrendinqi",
       "alfinx": "Front-end təcrübə",
-      "walkstep": "Landing səhifə"
-      ,"deskPi": "AI desktop köməkçisi"
+      "walkstep": "Landing səhifə",
+      "deskPi": "AI desktop köməkçisi"
     },
     "sort": {
       "label": "Sıralama",

@@ -15,7 +15,7 @@ export default async function WhyMe({
     <PageShell section="why">
       <div className="why-grid">
         <div className="why-portrait">
-          <Asset name="portrait.png" alt={t("portraitAlt")} sizes="45vw" />
+          <Asset name="portrait.svg" alt={t("portraitAlt")} sizes="45vw" />
         </div>
         <div className="principles">
           {["detail", "product", "team"].map((key, i) => (

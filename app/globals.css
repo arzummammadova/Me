@@ -3472,6 +3472,7 @@ body:not(:has(.content-page)) .sky-clouds { display: none; }
 .svc-toggle button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
 .svc-toggle button:focus-visible { outline: 2px solid #2f5bd3; outline-offset: 3px; }
 .svc-browse { list-style: none; margin: 0; padding: 0; }
+.svc-browse > li > div { height: 100%; }
 .svc-browse.view-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 .svc-item { height: 100%; }
 .svc-visual {

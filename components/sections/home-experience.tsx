@@ -28,26 +28,26 @@ export function HomeExperience() {
           </div>
           <h1 className="sr-only">{t("title")}</h1>
           <Asset
-            name="folder-pink.png"
+            name="folder-pink.svg"
             className="hero-pink floating"
             priority
             sizes="12vw"
           />
           <Asset
-            name="folder-blue.png"
+            name="folder-blue.svg"
             className="hero-blue floating"
             priority
             sizes="16vw"
           />
           <Asset
-            name="folder-blue.png"
+            name="folder-blue.svg"
             className="hero-blue-right floating"
             priority
             sizes="16vw"
           />
           <Link href="/why-me" className="card-link" aria-label={t("cardLink")}>
             <Asset
-              name="developer-card.png"
+              name="developer-card.svg"
               className="developer-card"
               alt={t("cardAlt")}
               priority
@@ -55,7 +55,7 @@ export function HomeExperience() {
             />
           </Link>
           <Asset
-            name="portrait.png"
+            name="portrait.svg"
             className="hero-portrait"
             alt={t("portraitAlt")}
             priority

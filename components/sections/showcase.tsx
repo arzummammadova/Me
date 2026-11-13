@@ -95,7 +95,7 @@ export function Showcase({
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="reader-wrap changing">
-          <Asset name="reader.png" className="reader" sizes="40vw" />
+        <Asset name="reader.svg" className="reader" sizes="40vw" />
           <div className="book-copy">
             <h2>{project.name}</h2>
             <p>{t(project.id + "Tagline")}</p>
