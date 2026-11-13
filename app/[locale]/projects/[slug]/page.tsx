@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SkyClouds } from "@/components/sky-clouds";
 import { ServiceIcon } from "@/components/service-icon";
+import { PhotoPlaceholder } from "@/components/photo-placeholder";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { portfolioProjects, projectSlug, findProject, type ShowcaseBlock } from "@/data/site";
@@ -64,13 +65,6 @@ export default async function ProjectDetails({ params }: { params: Params }) {
         : []);
   const videos = project.links.filter((l) => l.kind === "video");
   const external = project.links.filter((l) => l.kind !== "video");
-  const initials = project.name
-    .split(/[\s.-]+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("")
-    .toUpperCase();
   const shots = [...(hero ? [hero] : []), ...blocks.flatMap((b) => b.images)];
   const alt = (src: string) =>
     t("galleryAlt", { name: project.name, n: shots.indexOf(src) + 1 });
@@ -98,9 +92,7 @@ export default async function ProjectDetails({ params }: { params: Params }) {
               <Image src={hero} alt={alt(hero)} fill priority sizes="(max-width: 900px) 92vw, 1300px" />
             ) : (
               <div className="detail-hero-empty">
-                <span className="project-monogram" aria-hidden="true">
-                  {initials}
-                </span>
+                <PhotoPlaceholder size={72} />
                 <p>{t("noMedia")}</p>
               </div>
             )}

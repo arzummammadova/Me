@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ServiceIcon } from "@/components/service-icon";
 import { GridIcon, ListIcon } from "@/components/view-toggle-icons";
+import { PhotoPlaceholder } from "@/components/photo-placeholder";
 
 type Item = {
   slug: string;
@@ -12,7 +13,6 @@ type Item = {
   alt: string;
   subtitle: string;
   text: string;
-  initials: string;
 };
 
 type Labels = {
@@ -75,9 +75,7 @@ export function ProjectsBrowser({ items, labels }: { items: Item[]; labels: Labe
                     }
                   />
                 ) : (
-                  <span className="svc-mark proj-mark" aria-hidden="true">
-                    {p.initials}
-                  </span>
+                  <PhotoPlaceholder />
                 )}
                 <span className="card-overlay" aria-hidden="true">
                   <span className="card-overlay-text">{p.text}</span>

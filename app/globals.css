@@ -3778,3 +3778,23 @@ main.content-page > .page-body { margin-top: clamp(56px, 6vw, 96px); }
   main.content-page > .page-body { margin-top: 56px; }
 }
 /* END cloud-bank */
+
+/* BEGIN toggles-placeholder */
+.svc-toggle .view-icon-btn,
+.svc-toggle .view-icon-btn:hover,
+.svc-toggle .view-icon-btn[aria-pressed="true"] { background: none; border: 0; box-shadow: none; }
+.svc-toggle .view-icon-btn { color: #94a3b8; }
+.svc-toggle .view-icon-btn:hover { color: #475569; }
+.svc-toggle .view-icon-btn[aria-pressed="true"] { color: #0f172a; }
+.photo-placeholder {
+  position: relative; z-index: 1;
+  display: grid; place-items: center;
+  color: rgba(255, 255, 255, .7);
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+.view-list .photo-placeholder svg { width: 28px; height: 28px; }
+@media (hover: hover) {
+  .proj-link:hover .photo-placeholder { transform: scale(1.06) translateY(-10%); }
+}
+.detail-hero-empty .photo-placeholder { color: rgba(220, 234, 246, .75); }
+/* END toggles-placeholder */

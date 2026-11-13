@@ -17,16 +17,6 @@ export async function generateMetadata({
   return { title: t("metaTitle"), description: t("intro") };
 }
 
-function projectInitials(name: string) {
-  return name
-    .split(/[\s.-]+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("")
-    .toUpperCase();
-}
-
 export default async function Projects({
   params,
 }: {
@@ -49,7 +39,6 @@ export default async function Projects({
             alt: t("imageAlt", { name: p.name }),
             subtitle: t(`subs.${p.id}`),
             text: description(p.id),
-            initials: projectInitials(p.name),
           }))}
           labels={{
             newest: t("sort.newest"),
