@@ -6,6 +6,7 @@ import { Asset } from "@/components/asset";
 import { projects } from "@/data/profile";
 import { ServiceIcon } from "@/components/service-icon";
 import { Link } from "@/i18n/navigation";
+import { motion } from "motion/react";
 
 export function Showcase({
   index,
@@ -60,11 +61,19 @@ export function Showcase({
         {project.name}
       </div>
       <div className="laptop changing">
+        <div className="laptop-screen">
+          <Asset
+            key={project.id}
+            name={project.screen}
+            className="screen-image"
+            alt={t(project.id + "Alt")}
+            sizes="54vw"
+          />
+        </div>
         <Asset
-          key={project.id}
-          name={"laptop-" + project.id + ".png"}
+          name="macbook.png"
           className="macbook"
-          alt={t(project.id + "Alt")}
+          alt=""
           sizes="85vw"
         />
       </div>
@@ -78,7 +87,13 @@ export function Showcase({
         className={"project-right " + project.id + " changing"}
         sizes="15vw"
       />
-      <div className="reader-cluster">
+      <motion.div
+        className="reader-cluster"
+        initial={{ opacity: 0, y: 24, scale: 0.96 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      >
         <div className="reader-wrap changing">
           <Asset name="reader.png" className="reader" sizes="40vw" />
           <div className="book-copy">
@@ -99,7 +114,7 @@ export function Showcase({
             </button>
           )}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

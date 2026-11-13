@@ -2,6 +2,7 @@
 import { useLayoutEffect, type MutableRefObject, type RefObject } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { projects } from "@/data/profile";
 gsap.registerPlugin(ScrollTrigger);
 
 export type ShowcaseScrollApi = {
@@ -60,21 +61,44 @@ export function useHomeAnimation(
           ".showcase-scene",
         ) as HTMLElement;
         if (!desktop) {
-          const st = ScrollTrigger.create({
-            trigger: work,
-            start: "top top",
-            end: "+=90%",
-            pin: true,
-            scrub: 1,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-            onUpdate: (self) => {
-              applyIndex(self.progress > 0.45 ? 1 : 0);
+          const mobileTimeline = gsap.timeline({
+            scrollTrigger: {
+              trigger: work,
+              start: "top top",
+              end: "+=180%",
+              pin: true,
+              scrub: 0.8,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+              onUpdate: (self) => {
+                applyIndex(Math.min(projects.length - 1, Math.floor(self.progress * projects.length)));
+              },
             },
           });
+          mobileTimeline
+            .fromTo(
+              ".laptop",
+              { yPercent: 18, scale: 0.78, rotationX: 7 },
+              { yPercent: 0, scale: 1, rotationX: 0, duration: 0.45, ease: "power2.out" },
+              0,
+            )
+            .fromTo(
+              ".project-left, .project-right, .project-name",
+              { autoAlpha: 0, y: 22, scale: 0.9 },
+              { autoAlpha: 1, y: 0, scale: 1, duration: 0.35, stagger: 0.05, ease: "power2.out" },
+              0.18,
+            )
+            .fromTo(
+              ".showcase-controls",
+              { autoAlpha: 0, y: 16 },
+              { autoAlpha: 1, y: 0, duration: 0.25 },
+              0.32,
+            )
+            .to({}, { duration: 0.7 });
+          const st = mobileTimeline.scrollTrigger!;
           apiRef.current = {
             goTo(index) {
-              const y = st.start + (st.end - st.start) * (index === 0 ? 0.12 : 0.88);
+              const y = st.start + (st.end - st.start) * ((index + 0.5) / projects.length);
               window.scrollTo({ top: y, behavior: "smooth" });
             },
           };
@@ -82,7 +106,7 @@ export function useHomeAnimation(
             apiRef.current = null;
           };
         }
-        let switchAt = 0.62;
+        let projectStart = 0.62;
         const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: stage,
@@ -96,7 +120,8 @@ export function useHomeAnimation(
               const active = self.progress > 0.4;
               hero.inert = active;
               work.inert = !active;
-              applyIndex(self.progress >= switchAt ? 1 : 0);
+              const projectProgress = Math.max(0, self.progress - projectStart) / (1 - projectStart);
+              applyIndex(Math.min(projects.length - 1, Math.floor(projectProgress * projects.length)));
             },
           },
         });
@@ -162,15 +187,15 @@ export function useHomeAnimation(
           )
           .addLabel("ingri")
           .to({}, { duration: 0.36 })
-          .addLabel("switch")
-          .to({}, { duration: 0.5 })
           .addLabel("vribbe")
+          .to({}, { duration: 0.36 })
+          .addLabel("glabbe")
           .to({}, { duration: 0.36 });
-        switchAt = timeline.labels.switch / timeline.duration();
+        projectStart = timeline.labels.ingri / timeline.duration();
         const trigger = timeline.scrollTrigger!;
         apiRef.current = {
           goTo(index) {
-            const label = index === 0 ? "ingri" : "vribbe";
+            const label = projects[index]?.id ?? projects[0].id;
             const p = timeline.labels[label] / timeline.duration();
             const y = trigger.start + (trigger.end - trigger.start) * p;
             window.scrollTo({ top: y, behavior: "smooth" });

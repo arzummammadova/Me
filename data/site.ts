@@ -21,7 +21,7 @@ export const services = [
 
 export const processSteps = ["discuss", "design", "develop", "launch"] as const;
 
-export type ProjectLink = { kind: "live" | "figma" | "video" | "npm"; url: string };
+export type ProjectLink = { kind: "live" | "figma" | "video" | "npm"; url: string; label?: string };
 
 export type ShowcaseBlock = {
   layout: "full" | "pair" | "grid";
@@ -73,11 +73,58 @@ export const portfolioProjects: {
   {
     id: "vribbe",
     name: "VRIBBE",
-    image: "/assets/vribbe-screen.png",
-    gallery: ["/assets/vribbe-screen.png", "/assets/laptop-vribbe.png"],
+    image: "/assets/projects/vribbe.png",
+    showcase: [
+      { layout: "full", tone: "sky", images: ["/assets/projects/vribbe-panel.png"] },
+      { layout: "full", tone: "aqua", images: ["/assets/projects/vribbefullpage.png"] },
+    ],
     featured: true,
     tech: ["Next.js", "React", "Vite", "Supabase", "NestJS"],
-    links: [{ kind: "live", url: "https://vribbe.com/" }],
+    links: [
+      { kind: "live", url: "https://vribbe.com/", label: "Vribbe.com" },
+      { kind: "live", url: "https://panel.vribbe.com/", label: "İdarəetmə paneli" },
+      { kind: "live", url: "https://links.vribbe.com/", label: "Bütün keçidlər" },
+      { kind: "live", url: "https://studio.vribbe.com/", label: "Studio" },
+      { kind: "live", url: "https://millinet.az/az/musabiqeler/musabiqe2026/vribbe", label: "MilliNet 2026" },
+    ],
+  },
+  {
+    id: "glabbe",
+    name: "GLABBE",
+    image: "/assets/projects/glabbe.png",
+    gallery: ["/assets/projects/glabbefullpage.png"],
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
+    links: [],
+  },
+  {
+    id: "boulvard",
+    name: "Boulvard Clinic",
+    image: "/assets/projects/boulvards.png",
+    gallery: ["/assets/projects/boulvardfullpage.png"],
+    tech: ["Next.js", "Tailwind CSS", "i18n"],
+    links: [],
+  },
+  {
+    id: "walkstep",
+    name: "WalkStep",
+    image: "/assets/projects/walkstep.png",
+    gallery: ["/assets/projects/walkstepfulpafe.png"],
+    tech: [],
+    links: [],
+  },
+  {
+    id: "deskPi",
+    name: "DeskPi",
+    tech: [],
+    links: [],
+  },
+  {
+    id: "goldHospital",
+    name: "Gold Hospital",
+    image: "/assets/projects/goldhospital.png",
+    gallery: ["/assets/projects/goldhospitalfullpage.png"],
+    tech: ["Next.js", "Tailwind CSS", "FormSubmit"],
+    links: [],
   },
   {
     id: "readly",
@@ -89,26 +136,28 @@ export const portfolioProjects: {
       { kind: "video", url: "https://drive.google.com/file/d/1wsRM2GCxE24k6N7GBHLxOJAFQ-cEBr6l/view?usp=sharing" },
     ],
   },
-  {
-    id: "aionTimer",
-    name: "AION Timer",
-    image: "/assets/projects/aion-timer.png",
-    tech: ["TypeScript", "Next.js", "Tailwind CSS", "Three.js", "Redux", "Zod", "JWT", "MongoDB"],
-    links: [
-      { kind: "live", url: "https://aion-eosin.vercel.app/" },
-      { kind: "video", url: "https://drive.google.com/file/d/15C4aiUOaqxkwZV_ucOUwN-mjW4cUWv-p/view?usp=sharing" },
-    ],
-  },
-  {
-    id: "toast",
-    name: "arzu-toast-modal",
-    image: "/assets/projects/toast.png",
-    tech: ["TypeScript", "npm", "React / Next.js"],
-    links: [
-      { kind: "npm", url: "https://www.npmjs.com/package/arzu-toast-modal" },
-      { kind: "figma", url: "https://www.figma.com/community/file/1523304266707961935/toast-desing" },
-    ],
-  },
+  // Hidden at the portfolio owner’s request.
+  // {
+  //   id: "aionTimer",
+  //   name: "AION Timer",
+  //   image: "/assets/projects/aion-timer.png",
+  //   tech: ["TypeScript", "Next.js", "Tailwind CSS", "Three.js", "Redux", "Zod", "JWT", "MongoDB"],
+  //   links: [
+  //     { kind: "live", url: "https://aion-eosin.vercel.app/" },
+  //     { kind: "video", url: "https://drive.google.com/file/d/15C4aiUOaqxkwZV_ucOUwN-mjW4cUWv-p/view?usp=sharing" },
+  //   ],
+  // },
+  // Hidden at the portfolio owner’s request.
+  // {
+  //   id: "toast",
+  //   name: "arzu-toast-modal",
+  //   image: "/assets/projects/toast.png",
+  //   tech: ["TypeScript", "npm", "React / Next.js"],
+  //   links: [
+  //     { kind: "npm", url: "https://www.npmjs.com/package/arzu-toast-modal" },
+  //     { kind: "figma", url: "https://www.figma.com/community/file/1523304266707961935/toast-desing" },
+  //   ],
+  // },
   {
     id: "hubfolio",
     name: "Hubfolio",
@@ -118,24 +167,26 @@ export const portfolioProjects: {
       { kind: "live", url: "https://hubfolio-hazel.vercel.app/" },
     ],
   },
-  {
-    id: "aionAnalyze",
-    name: "AION Analyze",
-    image: "/assets/projects/aion-analyze.png",
-    tech: ["Next.js", "Node.js", "FastAPI"],
-    links: [
-      { kind: "video", url: "https://drive.google.com/file/d/1bMPSKwojQ_g54HJI5jeaPdDWMwxyUnyP/view?usp=sharing" },
-    ],
-  },
-  {
-    id: "voice",
-    name: "Voice Control Demo",
-    image: "/assets/projects/voice.png",
-    tech: ["Next.js", "Tailwind CSS", "Web Speech API", "Annyang.js"],
-    links: [
-      { kind: "live", url: "https://voice-control-demo.vercel.app/" },
-    ],
-  },
+  // Hidden at the portfolio owner’s request.
+  // {
+  //   id: "aionAnalyze",
+  //   name: "AION Analyze",
+  //   image: "/assets/projects/aion-analyze.png",
+  //   tech: ["Next.js", "Node.js", "FastAPI"],
+  //   links: [
+  //     { kind: "video", url: "https://drive.google.com/file/d/1bMPSKwojQ_g54HJI5jeaPdDWMwxyUnyP/view?usp=sharing" },
+  //   ],
+  // },
+  // Hidden at the portfolio owner’s request.
+  // {
+  //   id: "voice",
+  //   name: "Voice Control Demo",
+  //   image: "/assets/projects/voice.png",
+  //   tech: ["Next.js", "Tailwind CSS", "Web Speech API", "Annyang.js"],
+  //   links: [
+  //     { kind: "live", url: "https://voice-control-demo.vercel.app/" },
+  //   ],
+  // },
   {
     id: "metraj",
     name: "Metraj.az",
@@ -144,59 +195,34 @@ export const portfolioProjects: {
     links: [],
   },
   {
-    id: "goldHospital",
-    name: "Gold Hospital",
-    tech: ["Next.js", "Tailwind CSS", "FormSubmit"],
-    links: [],
-  },
-  {
-    id: "glabbe",
-    name: "GLABBE",
-    tech: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
-    links: [],
-  },
-  {
-    id: "loyalty",
-    name: "Loyalty System",
-    tech: ["React", "Tailwind CSS", "shadcn/ui", "Zustand", "PWA", "React Native", "NativeWind", "Expo"],
-    links: [],
-  },
-  {
-    id: "boulvard",
-    name: "Boulvard Clinic",
-    tech: ["Next.js", "Tailwind CSS", "i18n"],
-    links: [],
-  },
-  {
     id: "foodlens",
     name: "FoodLens",
+    image: "/assets/projects/foodlensapp.png",
+    gallery: ["/assets/projects/foodlens.png"],
     tech: ["React Native", "Node.js", "AI integration"],
     links: [],
   },
-  {
-    id: "evisa",
-    name: "Evisa",
-    tech: [],
-    links: [],
-  },
-  {
-    id: "clomni",
-    name: "Clomni",
-    tech: [],
-    links: [],
-  },
-  {
-    id: "alfinx",
-    name: "AlfinX",
-    tech: [],
-    links: [],
-  },
-  {
-    id: "walkstep",
-    name: "WalkStep",
-    tech: [],
-    links: [],
-  },
+  // Hidden until project images are available.
+  // {
+  //   id: "evisa",
+  //   name: "Evisa",
+  //   tech: [],
+  //   links: [],
+  // },
+  // Hidden until project images are available.
+  // {
+  //   id: "clomni",
+  //   name: "Clomni",
+  //   tech: [],
+  //   links: [],
+  // },
+  // Hidden until project images are available.
+  // {
+  //   id: "alfinx",
+  //   name: "AlfinX",
+  //   tech: [],
+  //   links: [],
+  // },
 ];
 
 export const projectSlug = (id: string) => id.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase());

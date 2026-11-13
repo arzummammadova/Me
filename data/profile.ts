@@ -31,6 +31,15 @@ export const projects = [
     url: "https://vribbe.com/",
     stack: ["Next.js", "React", "Supabase", "NestJS"],
   },
+  {
+    id: "glabbe",
+    name: "GLABBE",
+    screen: "projects/glabbe.png",
+    left: "folder-pink.png",
+    right: "folder-blue.png",
+    url: "/projects/glabbe",
+    stack: [],
+  },
 ] as const;
 export const skills = [
   "HTML5",

@@ -42,6 +42,7 @@ export function Flag({ locale }: { locale: string }) {
 }
 
 const navLinks = [
+  { href: "/", key: "home" },
   { href: "/about", key: "about" },
   { href: "/projects", key: "projects" },
   { href: "/services", key: "services" },

@@ -208,7 +208,7 @@ a svg {
 .home-header .language-switch {
   position: absolute;
   right: 2.2%;
-  top: 34px;
+  top: 44px;
   gap: 9px;
 }
 .scroll-stage {
@@ -340,7 +340,7 @@ a svg {
   border-radius: 3.2% / 3.6%;
   background: #000;
   overflow: hidden;
-  z-index: 1;
+  z-index: 3;
 }
 .screen-image {
   inset: 0;
@@ -348,6 +348,10 @@ a svg {
 .screen-image img {
   object-fit: cover;
   object-position: top center;
+}
+.state-glabbe .screen-image img {
+  object-fit: contain;
+  background: #fff;
 }
 .initial-decor {
   position: absolute;
@@ -398,6 +402,13 @@ a svg {
   width: 14%;
   height: 22%;
 }
+.project-left.glabbe,
+.project-left.boulvard {
+  left: 5.8%;
+  top: 35.5%;
+  width: 14%;
+  height: 22%;
+}
 .project-right.ingri {
   left: 76.8%;
   top: 17.5%;
@@ -406,6 +417,14 @@ a svg {
   z-index: 6;
 }
 .project-right.vribbe {
+  left: 76.2%;
+  top: 15.5%;
+  width: 11%;
+  height: 17%;
+  z-index: 6;
+}
+.project-right.glabbe,
+.project-right.boulvard {
   left: 76.2%;
   top: 15.5%;
   width: 11%;
@@ -3424,7 +3443,16 @@ body:not(:has(.content-page)) .sky-clouds { display: none; }
   color: var(--ink);
   background: rgba(255, 255, 255, 0.28);
 }
-.dock-links a[aria-current="page"] { text-shadow: none; }
+.dock-links a[aria-current="page"] {
+  background: transparent;
+  color: rgba(16, 44, 76, 0.8);
+  box-shadow: none;
+  text-shadow: inherit;
+}
+.dock-links a[aria-current="page"]:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.28);
+}
 /* END dock-liquid */
 
 /* BEGIN services-editorial */

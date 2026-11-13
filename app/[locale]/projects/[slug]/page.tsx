@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SkyClouds } from "@/components/sky-clouds";
 import { ServiceIcon } from "@/components/service-icon";
-import { PhotoPlaceholder } from "@/components/photo-placeholder";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { portfolioProjects, projectSlug, findProject, type ShowcaseBlock } from "@/data/site";
@@ -54,7 +53,8 @@ export default async function ProjectDetails({ params }: { params: Params }) {
   const t = await getTranslations("projectsPage");
   const description = await describe(locale, project.id);
   const extra = t.has(`extra.${project.id}`) ? t(`extra.${project.id}`) : "";
-  const hero = project.image;
+  // FoodLens uses its wide gallery artwork in the detail view; the card cover stays list-only.
+  const hero = project.id === "foodlens" ? undefined : project.image;
   const rest = (project.gallery ?? []).filter((src) => src !== hero);
   const blocks: ShowcaseBlock[] =
     project.showcase ??
@@ -87,16 +87,11 @@ export default async function ProjectDetails({ params }: { params: Params }) {
         </section>
 
         <div className="page-body detail-body">
-          <figure className={"detail-hero" + (hero ? "" : " is-empty")}>
-            {hero ? (
+          {hero ? (
+            <figure className="detail-hero">
               <Image src={hero} alt={alt(hero)} fill priority sizes="(max-width: 900px) 92vw, 1300px" />
-            ) : (
-              <div className="detail-hero-empty">
-                <PhotoPlaceholder size={72} />
-                <p>{t("noMedia")}</p>
-              </div>
-            )}
-          </figure>
+            </figure>
+          ) : null}
 
           <section className="detail-intro" aria-labelledby="detail-about-title">
             <div className="detail-intro-side">
@@ -106,7 +101,7 @@ export default async function ProjectDetails({ params }: { params: Params }) {
                   {external.map((l) => (
                     <li key={l.url}>
                       <a href={l.url} target="_blank" rel="noopener noreferrer">
-                        {t(`links.${l.kind}`)}
+                        {l.label ?? t(`links.${l.kind}`)}
                         <ServiceIcon name="arrow" />
                       </a>
                     </li>
