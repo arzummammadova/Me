@@ -16,7 +16,10 @@
     "projects": "Layihələr",
     "about": "Haqqımda",
     "menu": "Menyu",
-    "closeMenu": "Menyunu bağla"
+    "closeMenu": "Menyunu bağla",
+    "dock": "Sürətli naviqasiya",
+    "back": "Geri",
+    "orderSite": "Sayt sifariş et"
   },
   "home": {
     "intro": "Arzu ilə tanış olun",
@@ -304,17 +307,13 @@
     "metaTitle": "Layihələr",
     "title": "Qurduğum işlər.",
     "intro": "Kommersiya platformalarından şəxsi və açıq mənbəli layihələrə qədər — hər birində dizaynı işlək məhsula çevirmişəm.",
-    "featuredTitle": "Əsas layihələr",
-    "moreTitle": "Digər layihələr",
     "imageAlt": "{name} layihəsinin ekran görüntüsü",
-    "noPublicLink": "İctimai keçid mövcud deyil.",
     "roles": {
       "ingri": "Dil öyrənmə platforması",
       "vribbe": "Süni intellekt əsaslı ticarət platforması"
     },
     "links": {
       "live": "Sayt",
-      "github": "GitHub",
       "figma": "Figma",
       "video": "Video",
       "npm": "npm"
@@ -340,15 +339,24 @@
     "ctaTitle": "Növbəti layihə sizinki ola bilər.",
     "ctaText": "İdeyanızı danışın, onu birlikdə işlək məhsula çevirək.",
     "cta": "Əlaqə saxlayın",
-    "alsoBuilt": "Digər işlər"
+    "details": "Ətraflı bax",
+    "back": "Bütün layihələr",
+    "aboutTitle": "Layihə haqqında",
+    "videoTitle": "Video",
+    "galleryTitle": "Qalereya",
+    "galleryAlt": "{name} — ekran görüntüsü {n}",
+    "noMedia": "Bu layihə üçün vizual material hələ paylaşılmayıb. Ətraflı məlumat üçün mənimlə əlaqə saxlayın.",
+    "extra": {
+      "ingri": "Azərbaycanca danışanlar üçün ingilis dili dərsləri: interfeys azərbaycan və ingilis dillərində, dərs mətnləri isə azərbaycanca tərcümələrlə. Platformada qrammatika, söz kartları (flashcards), podkastlar, dinləmə və danışıq məşqləri, videolar, filmlər, kitablar, liderlər cədvəli, açıq və qaranlıq rejim var."
+    }
   },
   "about": {
     "metaTitle": "Haqqımda",
     "title": "Haqqımda",
-    "bioTitle": "Front-end inkişafı, dizayna diqqət və öyrənmə həvəsi.",
-    "bio1": "React, Redux, Tailwind CSS və Material UI ilə front-end inkişafı üzrə ixtisaslaşıram. Next.js ilə real platformalarda — INGRI və VRIBBE kimi layihələrdə — interfeyslər qurmuşam.",
-    "bio2": "Node.js, Express.js və MongoDB ilə backend təcrübəm də var. Bu, frontend-i API və məlumat strukturu ilə daha yaxşı əlaqələndirməyə kömək edir.",
-    "bio3": "Məqsədim full-stack developer olmaq və təsirli rəqəmsal məhsullar qurmaqdır. Hazırda TypeScript, qabaqcıl Next.js və React Native biliklərimi dərinləşdirirəm.",
+    "bioTitle": "Dizayndan işlək məhsula — 3+ illik real təcrübə.",
+    "bio1": "3 ildən artıqdır ki, real layihələr üzərində front-end developer kimi işləyirəm. React və Next.js ilə sürətli, responsiv və istifadəsi rahat interfeyslər qururam: INGRI və VRIBBE kimi platformalardan admin panellərə və korporativ saytlara qədər.",
+    "bio2": "Figma dizaynını piksel dəqiqliyi ilə koda çevirir, performans, əlçatanlıq (a11y), SEO və çoxdilliliyə xüsusi diqqət yetirirəm. Node.js, Express, MongoDB və Supabase təcrübəm sayəsində backend komandası ilə rahat işləyir, API inteqrasiyalarını səliqəli qururam.",
+    "bio3": "Kod yazmaqdan əlavə, Figma-da UI/UX dizayn edir, AI alətləri ilə video və vizual kontent hazırlayıram. Məqsədim hər layihədə həm gözəl görünən, həm də biznesə real nəticə gətirən rəqəmsal məhsullar yaratmaqdır.",
     "factEmail": "E-poçt",
     "stackTitle": "İş alətlərim",
     "journeyTitle": "Təcrübə və təhsil",

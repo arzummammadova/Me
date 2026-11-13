@@ -17,6 +17,7 @@ export function HomeMascot() {
     }, MASCOT_INTERVAL_MS);
     return () => window.clearInterval(id);
   }, [paused]);
+  if (!isHome) return null;
   const current = mascotPhrases[index];
   const prev = (index - 1 + mascotPhrases.length) % mascotPhrases.length;
   const label = t(`mascotPhrases.${current.key}`);

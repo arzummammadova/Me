@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { dockLinks } from "@/components/floating-dock";
 
 export function Flag({ locale }: { locale: string }) {
   if (locale === "az") {
@@ -89,7 +90,9 @@ export function Header() {
           </Link>
         )}
         <nav aria-label={t("navigation")} className="header-nav" id="site-nav">
-          {navLinks.map((link) => (
+          {navLinks
+            .filter((link) => home || !dockLinks.some((d) => d.href === link.href))
+            .map((link) => (
             <Link
               key={link.href}
               className="header-block"

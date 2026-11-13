@@ -21,12 +21,20 @@ export const services = [
 
 export const processSteps = ["discuss", "design", "develop", "launch"] as const;
 
-export type ProjectLink = { kind: "live" | "github" | "figma" | "video" | "npm"; url: string };
+export type ProjectLink = { kind: "live" | "figma" | "video" | "npm"; url: string };
+
+export type ShowcaseBlock = {
+  layout: "full" | "pair" | "grid";
+  tone?: "sky" | "aqua" | "lilac" | "navy";
+  images: string[];
+};
 
 export const portfolioProjects: {
   id: string;
   name: string;
   image?: string;
+  gallery?: string[];
+  showcase?: ShowcaseBlock[];
   featured?: boolean;
   tech: string[];
   links: ProjectLink[];
@@ -34,7 +42,30 @@ export const portfolioProjects: {
   {
     id: "ingri",
     name: "INGRI",
-    image: "/assets/ingri-screen.png",
+    image: "/assets/projects/learn-english/01-phones-dashboard-podcasts.webp",
+    showcase: [
+      { layout: "pair", tone: "aqua", images: ["/assets/projects/learn-english/05-desktop-collage-aqua.webp", "/assets/projects/learn-english/06-desktop-collage-lilac.webp"] },
+      { layout: "full", tone: "sky", images: ["/assets/projects/learn-english/09-desktop-light-dark.webp"] },
+      { layout: "pair", tone: "lilac", images: ["/assets/projects/learn-english/03-linkedin-phones.webp", "/assets/projects/learn-english/08-linkedin-desktop.webp"] },
+      {
+        layout: "grid",
+        tone: "sky",
+        images: ["/assets/projects/learn-english/mobile-dashboard-light.webp", "/assets/projects/learn-english/mobile-flashcards-light.webp", "/assets/projects/learn-english/mobile-speaking-light.webp"],
+      },
+      { layout: "full", tone: "aqua", images: ["/assets/projects/learn-english/02-phones-words-flashcards.webp"] },
+      {
+        layout: "grid",
+        tone: "navy",
+        images: [
+          "/assets/projects/learn-english/desktop-dashboard-light.webp",
+          "/assets/projects/learn-english/desktop-dashboard-dark.webp",
+          "/assets/projects/learn-english/desktop-words-light.webp",
+          "/assets/projects/learn-english/desktop-grammar-light.webp",
+        ],
+      },
+      { layout: "pair", tone: "sky", images: ["/assets/projects/learn-english/04-phones-grammar-speaking.webp", "/assets/projects/learn-english/10-phones-profile-dark.webp"] },
+      { layout: "full", tone: "lilac", images: ["/assets/projects/learn-english/07-desktop-auth.webp"] },
+    ],
     featured: true,
     tech: ["Next.js", "React", "i18n"],
     links: [{ kind: "live", url: "https://ingri-front.vercel.app/" }],
@@ -43,6 +74,7 @@ export const portfolioProjects: {
     id: "vribbe",
     name: "VRIBBE",
     image: "/assets/vribbe-screen.png",
+    gallery: ["/assets/vribbe-screen.png", "/assets/laptop-vribbe.png"],
     featured: true,
     tech: ["Next.js", "React", "Vite", "Supabase", "NestJS"],
     links: [{ kind: "live", url: "https://vribbe.com/" }],
@@ -53,7 +85,6 @@ export const portfolioProjects: {
     image: "/assets/projects/readly.png",
     tech: ["React", "Redux", "Node.js", "Express.js", "MongoDB", "JWT", "Material UI", "Formik-Yup", "Cloudinary", "SCSS"],
     links: [
-      { kind: "github", url: "https://github.com/arzummammadova/Readly-Front-back" },
       { kind: "figma", url: "https://www.figma.com/design/LmPlPyQ2uZxdvoh5Qn4ctr/Arzu-READLY--Community-?node-id=260-2" },
       { kind: "video", url: "https://drive.google.com/file/d/1wsRM2GCxE24k6N7GBHLxOJAFQ-cEBr6l/view?usp=sharing" },
     ],
@@ -65,7 +96,6 @@ export const portfolioProjects: {
     tech: ["TypeScript", "Next.js", "Tailwind CSS", "Three.js", "Redux", "Zod", "JWT", "MongoDB"],
     links: [
       { kind: "live", url: "https://aion-eosin.vercel.app/" },
-      { kind: "github", url: "https://github.com/arzummammadova/AION" },
       { kind: "video", url: "https://drive.google.com/file/d/15C4aiUOaqxkwZV_ucOUwN-mjW4cUWv-p/view?usp=sharing" },
     ],
   },
@@ -76,7 +106,6 @@ export const portfolioProjects: {
     tech: ["TypeScript", "npm", "React / Next.js"],
     links: [
       { kind: "npm", url: "https://www.npmjs.com/package/arzu-toast-modal" },
-      { kind: "github", url: "https://github.com/arzummammadova/arzu-toast-modal" },
       { kind: "figma", url: "https://www.figma.com/community/file/1523304266707961935/toast-desing" },
     ],
   },
@@ -87,7 +116,6 @@ export const portfolioProjects: {
     tech: ["HTML", "CSS", "Vanilla JS", "Scroll Animations"],
     links: [
       { kind: "live", url: "https://hubfolio-hazel.vercel.app/" },
-      { kind: "github", url: "https://github.com/arzummammadova/Hubfolio" },
     ],
   },
   {
@@ -96,7 +124,6 @@ export const portfolioProjects: {
     image: "/assets/projects/aion-analyze.png",
     tech: ["Next.js", "Node.js", "FastAPI"],
     links: [
-      { kind: "github", url: "https://github.com/arzummammadova/AION-Analyze" },
       { kind: "video", url: "https://drive.google.com/file/d/1bMPSKwojQ_g54HJI5jeaPdDWMwxyUnyP/view?usp=sharing" },
     ],
   },
@@ -107,7 +134,6 @@ export const portfolioProjects: {
     tech: ["Next.js", "Tailwind CSS", "Web Speech API", "Annyang.js"],
     links: [
       { kind: "live", url: "https://voice-control-demo.vercel.app/" },
-      { kind: "github", url: "https://github.com/arzummammadova/VoiceControlDemo" },
     ],
   },
   {
@@ -173,6 +199,9 @@ export const portfolioProjects: {
   },
 ];
 
+export const projectSlug = (id: string) => id.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase());
+export const findProject = (slug: string) => portfolioProjects.find((p) => projectSlug(p.id) === slug);
+
 // Smaller projects listed on the CV without details.
 export const alsoBuilt = ["ItsTour", "Karma", "HexasShop", "OnlineBookShop"];
 
@@ -198,13 +227,13 @@ export const techGroups: { id: "frontend" | "backend" | "design" | "ai"; items: 
       { name: "Bootstrap", icon: "bootstrap.png" },
       { name: "Material UI", icon: "material.png" },
       { name: "shadcn/ui", icon: "shadcn.png" },
-      { name: "Ant Design" },
+      { name: "Ant Design", icon: "antdesign.svg" },
       { name: "GSAP", icon: "gsap.png" },
       { name: "next-intl" },
       { name: "React Hook Form", icon: "rhf.png" },
       { name: "Formik & Yup", icon: "formikyup.png" },
       { name: "Axios", icon: "axios.png" },
-      { name: "PWA" },
+      { name: "PWA", icon: "pwa.svg" },
       { name: "Vite", icon: "vite.png" },
     ],
   },

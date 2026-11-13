@@ -96,8 +96,11 @@ export default async function About({
                       {tech.icon ? (
                         <Image src={`/assets/tech/${tech.icon}`} alt="" width={34} height={34} />
                       ) : (
-                        <span className="stack-mono">
-                          {tech.name.replace(/[^A-Za-z]/g, "").slice(0, 2)}
+                        <span className="stack-placeholder">
+                          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M12 3 4.5 7.25v9.5L12 21l7.5-4.25v-9.5L12 3Z" />
+                            <path d="M4.5 7.25 12 11.5l7.5-4.25M12 11.5V21" />
+                          </svg>
                         </span>
                       )}
                     </span>

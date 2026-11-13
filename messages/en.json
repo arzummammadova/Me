@@ -16,7 +16,10 @@
     "projects": "Projects",
     "about": "About",
     "menu": "Menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "dock": "Quick navigation",
+    "back": "Back",
+    "orderSite": "Order a website"
   },
   "home": {
     "intro": "Meet Arzu",
@@ -304,17 +307,13 @@
     "metaTitle": "Projects",
     "title": "Things I've built.",
     "intro": "From commercial platforms to personal and open-source projects — in each one I turned a design into a working product.",
-    "featuredTitle": "Main projects",
-    "moreTitle": "More projects",
     "imageAlt": "Screenshot of the {name} project",
-    "noPublicLink": "No public link available.",
     "roles": {
       "ingri": "Language learning platform",
       "vribbe": "AI-powered commerce platform"
     },
     "links": {
       "live": "Live site",
-      "github": "GitHub",
       "figma": "Figma",
       "video": "Video",
       "npm": "npm"
@@ -340,15 +339,24 @@
     "ctaTitle": "Your project could be next.",
     "ctaText": "Tell me about your idea and let's turn it into a working product.",
     "cta": "Get in touch",
-    "alsoBuilt": "Also built"
+    "details": "View details",
+    "back": "All projects",
+    "aboutTitle": "About the project",
+    "videoTitle": "Video",
+    "galleryTitle": "Gallery",
+    "galleryAlt": "{name} — screenshot {n}",
+    "noMedia": "Visuals for this project haven't been shared yet. Get in touch for more details.",
+    "extra": {
+      "ingri": "English lessons for Azerbaijani speakers: the interface works in Azerbaijani and English, and lesson texts come with Azerbaijani translations. The platform includes grammar, word flashcards, podcasts, listening and speaking practice, videos, films, books, a leaderboard and light and dark modes."
+    }
   },
   "about": {
     "metaTitle": "About",
     "title": "About",
-    "bioTitle": "Front-end development, an eye for design and a drive to learn.",
-    "bio1": "I specialize in front-end development with React, Redux, Tailwind CSS and Material UI. With Next.js I have built interfaces for real platforms such as INGRI and VRIBBE.",
-    "bio2": "I also have backend experience with Node.js, Express.js and MongoDB, which helps me connect the frontend with APIs and data structures.",
-    "bio3": "My goal is to become a full-stack developer and build impactful digital products. I'm currently deepening my knowledge of TypeScript, advanced Next.js and React Native.",
+    "bioTitle": "From design to working product — 3+ years of real experience.",
+    "bio1": "For over 3 years I've been building real products as a front-end developer. I create fast, responsive and user-friendly interfaces with React and Next.js, from platforms like INGRI and VRIBBE to admin dashboards and corporate websites.",
+    "bio2": "I turn Figma designs into pixel-perfect code with a strong focus on performance, accessibility, SEO and multilingual support. My backend experience with Node.js, Express, MongoDB and Supabase helps me work smoothly with backend teams and build clean API integrations.",
+    "bio3": "Beyond code, I design UI/UX in Figma and create video and visual content with AI tools. My goal is to build digital products that look great and deliver real business results.",
     "factEmail": "Email",
     "stackTitle": "My toolbox",
     "journeyTitle": "Experience & education",

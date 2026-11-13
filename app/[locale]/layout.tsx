@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { HomeMascot } from "@/components/home-mascot";
+import { FloatingDock } from "@/components/floating-dock";
 import "../globals.css";
 
 const inter = Inter({
@@ -46,6 +47,7 @@ export default async function LocaleLayout({
           {children}
           <Footer />
           <HomeMascot />
+          <FloatingDock />
         </NextIntlClientProvider>
       </body>
     </html>
